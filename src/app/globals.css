@@ -6,6 +6,7 @@
 body {
   background-color: black;
   color: white;
+  margin: 0;
 }
 
 .slide-in {
@@ -17,3 +18,28 @@ body {
   transition: margin-left 0.3s ease-in-out;
   margin-left: -100%;
 }
+
+:root {
+  --primary-color: #FF013D;
+  --primary-color-rgb: 255, 1, 61;
+}
+
+@media (min-width: 1025px) {
+  body{
+      padding-left: 15rem/* 144px */;
+      padding-right: 15rem/* 144px */;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  body{
+      min-width:1200px;
+  }
+  }
+
+  @media only screen and (min-width: 1400px) {
+  body{
+          min-width:1320px;
+      }
+  }
+
