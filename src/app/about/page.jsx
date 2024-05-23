@@ -1,15 +1,170 @@
+"use client"
 import CloseButton from "../components/Closebutton";
+import ClickableImageModal from "../components/PictureEffect/ClickableImageModal";
+import {
+  AiOutlineHtml5,
+  AiOutlineCode,
+  AiOutlinePicture,
+} from "react-icons/ai";
+import Testimonials from "../components/Testimonials";
 
-// app/about/page.js
 export default function About() {
-    return (
-      <div className="flex flex-col">
-        <div className="flex justify-end fixed top-4 right-4">
-        <CloseButton/>
-        </div>
-        <h1 className="flex">About Me Page</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem ea iure quos, impedit numquam delectus at? Itaque odio, pariatur, ducimus laborum tenetur molestias quae excepturi ex blanditiis quaerat necessitatibus soluta veniam, quibusdam quod quidem quam exercitationem culpa doloribus sunt et vitae dicta corporis explicabo. Eaque at omnis vero repudiandae quos perferendis amet, fugiat, aut dolorum, iste nihil commodi quae! Atque ab repudiandae exercitationem perspiciatis sed cumque, libero error doloremque ducimus fuga? Dolor, deleniti sunt ut perspiciatis perferendis nostrum magnam neque dicta recusandae, vel corporis autem consequuntur, repellat esse blanditiis quisquam possimus et eaque praesentium ipsa iusto delectus corrupti laudantium. Aliquid accusantium ipsa obcaecati quisquam minima consequuntur, quis omnis earum officiis ad qui commodi impedit, hic vero enim ab quas maiores natus mollitia dolorum modi doloribus non eos. Incidunt reiciendis eum nostrum nemo distinctio tempore hic, natus vel laborum quaerat porro temporibus minus soluta ullam in, molestias sint similique voluptates obcaecati! Nemo eaque maxime earum et ipsam molestiae nostrum labore praesentium, ad distinctio aliquid iure quis, veniam facilis dignissimos! Exercitationem suscipit adipisci, porro, libero fugiat numquam blanditiis dignissimos voluptatem itaque facilis, quasi voluptas enim facere molestiae sit quibusdam atque? Voluptate velit, repellat dolore nemo quisquam distinctio quo pariatur sunt rem dicta, facilis inventore commodi assumenda, aperiam sint at. Animi magni iure officia nam placeat earum cupiditate, doloremque perferendis veritatis, exercitationem vel. Illo itaque nostrum a ullam eum architecto dicta amet doloribus est minus, iste, deserunt in laboriosam porro. Repellat numquam ex non porro, aperiam cupiditate perspiciatis dolorem, voluptatum ducimus id illum hic quisquam reiciendis ratione est. Sint ad, odio accusamus dolor porro exercitationem temporibus laudantium inventore rerum saepe minima cum aliquid voluptatem fuga harum natus. Eius fuga minima laudantium fugiat distinctio recusandae nihil optio provident accusamus veniam, sit, natus vero similique? Eaque facere accusamus molestias sunt, deleniti cum non, quam repellat quidem numquam sapiente voluptate voluptates iure corporis fuga possimus consectetur unde est officiis ab, tempora nulla ducimus debitis architecto! A aut, cum voluptas vitae veniam perferendis deleniti dolores numquam porro dolor rem aliquam dolorum odit vel dolore vero perspiciatis accusamus natus. Distinctio cupiditate deserunt laboriosam voluptatibus tenetur iste ex quaerat cum, laborum molestias quas consequuntur numquam, adipisci labore enim pariatur sunt? Culpa placeat recusandae eos cum ipsa, aliquid autem rem quasi quae similique nobis expedita reiciendis. Perspiciatis, corrupti totam? Nulla modi totam maiores non praesentium vel minus quod quisquam, omnis enim! Repudiandae, temporibus quasi expedita fugit animi rem atque soluta pariatur repellat voluptate at a officia architecto iusto eius ullam asperiores inventore nisi! Quae, repellendus ratione! Sed autem libero explicabo, neque, totam architecto exercitationem est, blanditiis itaque aspernatur modi! Autem id ipsum dolorum, inventore possimus sapiente unde, quaerat distinctio maxime minima, perspiciatis iusto nesciunt ad reprehenderit at fugit perferendis sint necessitatibus voluptatem rem dolor consequuntur corrupti non nostrum? Vel nisi enim mollitia totam odit pariatur, cumque aliquam consequatur. Tempore iusto maxime officia, quasi excepturi dolorum laudantium dolore nihil eveniet quam magni omnis consequatur nam, ipsum quaerat minus ea recusandae sint voluptas nulla itaque molestias? Earum nam odio repudiandae quisquam, recusandae porro iste incidunt maxime similique cumque officiis minus, quibusdam excepturi reiciendis accusantium corporis ipsa exercitationem voluptas dolorum. Enim asperiores veniam placeat repellat reiciendis impedit minus rem eaque dolorem inventore animi aliquid nulla, architecto suscipit voluptate unde corrupti eius sapiente id soluta rerum fugiat obcaecati. Maxime, iure eaque tempore accusamus labore nostrum libero esse perferendis ducimus quae rem fugiat a, nesciunt doloribus quos odio animi ut sint saepe voluptates? Itaque quasi aspernatur accusamus possimus excepturi, necessitatibus, consectetur nesciunt voluptates fugit ipsam, eius error iure vel? Nemo, eveniet? Velit veritatis, cumque tempora impedit ullam molestiae in odio ducimus. Quos earum quia obcaecati reiciendis placeat officiis eos corporis deleniti neque ducimus omnis dolor magnam doloremque, nulla repellendus possimus quas, amet illum assumenda commodi fugit cupiditate. Quae incidunt ullam autem vel ipsum officia aut obcaecati reiciendis dicta, accusantium alias, placeat exercitationem suscipit error. Facilis, voluptatem suscipit quo consequatur ea, quidem magnam odio beatae vel est eum ullam fugiat esse. Facere soluta, temporibus veritatis natus a explicabo hic perferendis? Asperiores qui sapiente vel enim, quisquam tenetur beatae necessitatibus aliquid odio unde dignissimos labore aspernatur esse quod. Dolorem dolorum alias aspernatur accusantium. Iure, ex quas qui nostrum optio possimus voluptas obcaecati vero quia eius delectus fugiat eligendi tempore illum in beatae ab iusto alias ea id? Deleniti facere quis ipsa, necessitatibus saepe, ea iure doloribus nihil ex corporis perspiciatis! Deleniti a nisi tempora eius repellendus laboriosam animi magnam ducimus. Fugiat dolorum tempore aut quaerat quasi veniam vitae quis amet saepe asperiores quibusdam sequi minima cupiditate magni odit, est tenetur ipsum blanditiis maiores quas accusantium debitis, eveniet autem. A dolorem harum maiores, adipisci quas eveniet eligendi! Enim velit laudantium quidem nostrum delectus odio asperiores veniam maiores ea labore, blanditiis corrupti voluptas, eum, minus nemo at fugiat minima natus molestias? Velit dolor veniam sint et, corrupti impedit. Consequuntur sit non molestiae, ipsum nam ad nostrum mollitia incidunt sapiente veritatis eveniet, culpa in esse ut tenetur est neque libero dignissimos velit error optio at quia delectus. Laborum id blanditiis dicta aspernatur repellendus explicabo tenetur animi, inventore autem qui quibusdam porro magni, consectetur pariatur, reprehenderit nobis a incidunt est excepturi quam assumenda tempore minima dolore. Nesciunt provident ut aperiam architecto est facilis in cumque cum. Praesentium debitis tempore sit porro necessitatibus modi. Fuga eos atque nesciunt. Perferendis rerum, quae similique deleniti modi excepturi aliquam. Accusantium aliquam magnam vero nobis dolorum ut veniam beatae possimus molestias odit provident adipisci maiores facere et tenetur delectus culpa autem optio, id sequi voluptatem quod esse inventore earum? Cum possimus harum quasi perspiciatis est minus, quidem inventore quaerat amet eum officia! Deserunt necessitatibus maxime nemo quos nam eveniet, debitis quo magni sit, facilis eius nisi nobis quam repudiandae nulla tempore autem fuga vel ullam a? Nobis optio architecto possimus error deleniti totam debitis. Dolore cumque, nobis voluptatibus culpa aut pariatur rem velit exercitationem ipsam id suscipit illo quod minus soluta qui deleniti sint et officiis, itaque veniam nesciunt placeat dolores facilis nisi? Assumenda illum excepturi omnis, mollitia, error animi officia vel cupiditate nam non incidunt.</p>
+  return (
+    <div className="relative flex flex-col font-general px-7">
+      <div className="flex justify-end fixed top-4 right-4">
+        <CloseButton />
       </div>
-    );
-  }
-  
+      <div className="flex flex-col justify-center items-center my-10 lg:my-20 gap-y-5">
+        <h4 className="text-xl text-primary">Who I Am</h4>
+        <h2 className="text-5xl font-semibold">About Me</h2>
+        <hr className="w-28 mx-auto my-4 border-t-2 border-primary" />
+      </div>
+      <div className="flex flex-col md:flex-col lg:flex-row gap-x-28 items-center">
+        <div className="max-w-auto mx-4 sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl rounded-lg text-gray-900 relative">
+          <div className="h-auto overflow-hidden">
+            <ClickableImageModal
+              imageUrl="/background/1.jpg"
+              containerClassName="w-full h-full"
+              imageClassName="object-cover object-top w-full h-full"
+            />
+          </div>
+
+          <div className="absolute w-[40%] h-[40%] right-[-2%] md:right-[-13%] lg:right-[-13%] bottom-[-20%]">
+            <ClickableImageModal
+              imageUrl="/background/2.jpg"
+              containerClassName="w-full h-full"
+              imageClassName=" w-full h-full"
+            />
+          </div>
+        </div>
+        <div className="lg:w-1/2 flex flex-col items-start pt-20 lg:pt-2">
+          <h1 className="text-2xl lg:text-4xl font-general font-bold">
+            Hello, I'm&nbsp;
+            <span className="text-primary">Faocci Layug</span>
+          </h1>
+          <p className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify ">
+            Hello, I'm Faocci Ghaize O. Layug, a dedicated individual with a
+            passion for technology and design. My journey in the dynamic
+            intersection of creativity and innovation has driven me to
+            constantly seek new challenges and push the boundaries of what's
+            possible in the digital realm.
+          </p>
+          <p className="text-sm lg:text-lg font-general mt-4 text-white">
+            <span className="text-primary">Residence:&nbsp;</span>
+            Mabalacat City, Pampanga, Philippines
+          </p>
+          <p className="text-sm lg:text-lg font-general mt-2 text-white">
+            <span className="text-primary">Email:&nbsp;</span>
+            faocciworx@gmail.com
+          </p>
+          <p className="text-sm lg:text-lg font-general mt-2 text-white">
+            <span className="text-primary">Phone:&nbsp;</span>
+            +(63) 909-122-6365
+          </p>
+        </div>
+      </div>
+      <div className="relative">
+        <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] border-[#FFFFFF33] rounded inline-block text-center p-3 mt-8 lg:mt-40">
+          My Services
+        </h1>
+        <div className="flex flex-col lg:flex-row pt-8 lg:pt-10 lg:p-4 gap-x-2">
+          <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
+            <div className="service-container flex items-center">
+              <div className="h-20 w-20 sm:h-32 sm:w-32 mr-4 mt-2 flex items-center justify-center">
+                <AiOutlineHtml5 className="h-12 w-12 text-primary" />
+              </div>
+              <div className="flex flex-col">
+                <h1 className="text-xl mb-2 font-bold">Website Design</h1>
+                <p className="text-sm">
+                  Proficient in HTML, CSS, and introductory JavaScript,
+                  Bootstrap for creating and styling web pages. Familiar with
+                  principles of responsive design.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
+            <div className="service-container flex items-center">
+              <div className="h-20 w-20 sm:h-32 sm:w-32 mr-4 mt-2 flex items-center justify-center font-general">
+                <AiOutlineCode className="h-12 w-12 text-primary" />
+              </div>
+              <div className="flex flex-col">
+                <h1 className="text-xl mb-2 font-bold">Graphic Design</h1>
+                <p className="text-sm">
+                  Skilled in using graphic design tools such as Adobe Photoshop
+                  for image editing and Adobe Illustrator for vector graphics.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
+            <div className="service-container flex items-center">
+              <div className="h-20 w-20 sm:h-32 sm:w-32 mr-4 mt-2 flex items-center justify-center">
+                <AiOutlinePicture className="h-12 w-12 text-primary" />
+              </div>
+              <div className="flex flex-col">
+                <h1 className="text-xl mb-2 font-bold">Computer Technician</h1>
+                <p className="text-sm ">
+                  Experienced in hardware installation, software
+                  troubleshooting, and network configuration expertise.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col lg:flex-row lg:p-4 gap-x-2">
+          <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
+            <div className="service-container flex items-center">
+              <div className="h-20 w-20 sm:h-32 sm:w-32 mr-4 mt-2 flex items-center justify-center">
+                <AiOutlineHtml5 className="h-12 w-12 text-primary" />
+              </div>
+              <div className="flex flex-col">
+                <h1 className="text-xl mb-2 font-bold">Computer Literate</h1>
+                <p className="text-sm">
+                  Well-versed in operating systems (Windows, MacOS), Microsoft
+                  Office Suite, internet navigation, and basic troubleshooting.
+                  Comfortable with various software applications.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
+            <div className="service-container flex items-center">
+              <div className="h-20 w-20 sm:h-32 sm:w-32 mr-4 mt-2 flex items-center justify-center font-general">
+                <AiOutlineCode className="h-12 w-12 text-primary" />
+              </div>
+              <div className="flex flex-col">
+                <h1 className="text-xl mb-2 font-bold">Backup & Security</h1>
+                <p className="text-sm">
+                  Skilled in using graphic design tools such as Adobe Photoshop
+                  for image editing and Adobe Illustrator for vector graphics.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
+            <div className="service-container flex items-center">
+              <div className="h-20 w-20 sm:h-32 sm:w-32 mr-4 mt-2 flex items-center justify-center">
+                <AiOutlinePicture className="h-12 w-12 text-primary" />
+              </div>
+              <div className="flex flex-col">
+                <h1 className="text-xl mb-2 font-bold">IT Consultancy</h1>
+                <p className="text-sm ">
+                  I specialize in enhancing business efficiency through
+                  strategic IT solutions. Let's navigate the tech landscape
+                  together for your success.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="relative">
+          <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] border-[#FFFFFF33] rounded inline-block text-center p-3 mt-2 lg:mt-16">
+            Testimonials
+          </h1>
+            <Testimonials/>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-  background-color: black;
+  background-color: #111;
   color: white;
   margin: 0;
 }
@@ -20,26 +19,58 @@ body {
 }
 
 :root {
-  --primary-color: #FF013D;
+  --primary-color: #ff013d;
   --primary-color-rgb: 255, 1, 61;
 }
 
 @media (min-width: 1025px) {
-  body{
-      padding-left: 15rem/* 144px */;
-      padding-right: 15rem/* 144px */;
+  body {
+    padding-left: 15rem /* 144px */;
+    padding-right: 15rem /* 144px */;
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  body{
-      min-width:1200px;
+  body {
+    min-width: 1200px;
   }
-  }
+}
 
-  @media only screen and (min-width: 1400px) {
-  body{
-          min-width:1320px;
-      }
+@media only screen and (min-width: 1400px) {
+  body {
+    min-width: 1320px;
   }
+}
 
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  width: 16px !important;
+  height: 4px !important;
+  border-radius: 5px !important;
+  margin: 0 6px !important;
+}
+
+.swiper-pagination {
+  bottom: 2px !important;
+}
+
+.swiper-wrapper {
+  height: max-content !important;
+  width: max-content !important;
+  padding-bottom: 64px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #4f46e5 !important;
+}
+
+.swiper-slide.swiper-slide-active > .slide_active\:border-indigo-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(79 70 229 / var(--tw-border-opacity));
+}
+
+.swiper-slide.swiper-slide-active > .group .slide_active\:text-gray-800 {
+  ---tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}

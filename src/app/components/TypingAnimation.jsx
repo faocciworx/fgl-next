@@ -38,7 +38,7 @@ const TypingAnimation = ({ texts, baseSpeed = 70, speedVariance = 30, className 
   return (
     <div
       id="text"
-      className={`font-general text-xl lg:text-3xl whitespace-pre text-primary overflow-hidden animate-caret ${className}`}
+      className={`font-general text-xl lg:text-3xl whitespace-pre text-primary overflow-hidden animate-caret border-r ${className}`}
     >
       {displayedText}
     </div>
