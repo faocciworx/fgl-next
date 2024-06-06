@@ -7,13 +7,13 @@ const Sidebar = ({ isOpen, closeMenu, navItems }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-50 bg-gray-900 bg-opacity-50 ${
+      className={`fixed inset-0 z-50 bg-gray-800 bg-opacity-50 ${
         isOpen ? "block" : "hidden"
       }`}
       onClick={closeMenu}
     >
       <div
-        className="w-64 bg-[#111] p-4 h-full"
+        className="w-64 bg-[#202020] p-4 h-full"
         onClick={(e) => e.stopPropagation()}
         style={{ right: 0 }}
       >
@@ -41,7 +41,7 @@ const Sidebar = ({ isOpen, closeMenu, navItems }) => {
                   className={`flex items-center space-x-2 py-2 px-3 rounded cursor-pointer ${
                     item.href === pathname
                       ? "text-white bg-primary"
-                      : "text-gray-900 hover:bg-gray-100 dark:hover:bg-primary dark:text-white"
+                      : "text-white hover:bg-gray-100 dark:hover:bg-primary dark:text-white"
                   }`}
                 >
                   {item.icon}
