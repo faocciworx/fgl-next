@@ -79,7 +79,7 @@ const Testimonial = () => {
       className={`px-4 ${isSmallScreen ? "w-auto" : "w-full"}`}
       style={{ width: calculateItemWidth() }}
     >
-      <div className="group p-6 transition-all duration-500 font-general text-white">
+      <div className="group p-1 md:p-4 lg:p-6 transition-all duration-500 font-general text-white">
         <div>
           <blockquote class="text-base leading-6 transition-all italic font-semibold">
             <svg

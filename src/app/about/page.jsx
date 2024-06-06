@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import CloseButton from "../components/Closebutton";
 import ClickableImageModal from "../components/PictureEffect/ClickableImageModal";
 import {
@@ -67,10 +67,10 @@ export default function About() {
         <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] border-[#FFFFFF33] rounded inline-block text-center p-3 mt-8 lg:mt-40">
           My Services
         </h1>
-        <div className="flex flex-col lg:flex-row pt-8 lg:pt-10 lg:p-4 gap-x-2">
+        <div className="flex flex-col lg:flex-row pt-8 lg:pt-10 lg:p-4 gap-x-2 items-start">
           <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
             <div className="service-container flex items-center">
-              <div className="h-20 w-20 sm:h-32 sm:w-32 mr-4 mt-2 flex items-center justify-center">
+              <div className="mr-4 flex items-center justify-center self-start">
                 <AiOutlineHtml5 className="h-12 w-12 text-primary" />
               </div>
               <div className="flex flex-col">
@@ -85,7 +85,7 @@ export default function About() {
           </div>
           <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
             <div className="service-container flex items-center">
-              <div className="h-20 w-20 sm:h-32 sm:w-32 mr-4 mt-2 flex items-center justify-center font-general">
+              <div className="mr-4 flex items-center justify-center self-start font-general">
                 <AiOutlineCode className="h-12 w-12 text-primary" />
               </div>
               <div className="flex flex-col">
@@ -99,7 +99,7 @@ export default function About() {
           </div>
           <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
             <div className="service-container flex items-center">
-              <div className="h-20 w-20 sm:h-32 sm:w-32 mr-4 mt-2 flex items-center justify-center">
+              <div className="mr-4 flex items-center justify-center self-start">
                 <AiOutlinePicture className="h-12 w-12 text-primary" />
               </div>
               <div className="flex flex-col">
@@ -112,10 +112,10 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row lg:p-4 gap-x-2">
+        <div className="flex flex-col lg:flex-row lg:p-4 gap-x-2 items-start">
           <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
             <div className="service-container flex items-center">
-              <div className="h-20 w-20 sm:h-32 sm:w-32 mr-4 mt-2 flex items-center justify-center">
+              <div className="mr-4 flex items-center justify-center self-start">
                 <AiOutlineHtml5 className="h-12 w-12 text-primary" />
               </div>
               <div className="flex flex-col">
@@ -130,7 +130,7 @@ export default function About() {
           </div>
           <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
             <div className="service-container flex items-center">
-              <div className="h-20 w-20 sm:h-32 sm:w-32 mr-4 mt-2 flex items-center justify-center font-general">
+              <div className="mr-4 flex items-center justify-center self-start font-general">
                 <AiOutlineCode className="h-12 w-12 text-primary" />
               </div>
               <div className="flex flex-col">
@@ -144,7 +144,7 @@ export default function About() {
           </div>
           <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
             <div className="service-container flex items-center">
-              <div className="h-20 w-20 sm:h-32 sm:w-32 mr-4 mt-2 flex items-center justify-center">
+              <div className="mr-4 flex items-center justify-center self-start">
                 <AiOutlinePicture className="h-12 w-12 text-primary" />
               </div>
               <div className="flex flex-col">
@@ -162,7 +162,7 @@ export default function About() {
           <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] border-[#FFFFFF33] rounded inline-block text-center p-3 mt-2 lg:mt-16">
             Testimonials
           </h1>
-            <Testimonials/>
+          <Testimonials />
         </div>
       </div>
     </div>

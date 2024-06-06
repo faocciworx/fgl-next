@@ -13,7 +13,7 @@ const Sidebar = ({ isOpen, closeMenu, navItems }) => {
       onClick={closeMenu}
     >
       <div
-        className="w-64 bg-black p-4 h-full"
+        className="w-64 bg-[#111] p-4 h-full"
         onClick={(e) => e.stopPropagation()}
         style={{ right: 0 }}
       >
