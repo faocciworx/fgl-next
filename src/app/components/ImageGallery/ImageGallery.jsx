@@ -1,11 +1,30 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaGithub, FaEye, FaLink, FaTimes } from "react-icons/fa";
 import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
-import ImageData from "./ImageData"; // Updated to reflect the new module name
+import ImageData from "./ImageData";
 
 const Modal = ({ images, onClose, currentIndex, setSelectedImageIndex }) => {
   const [current, setCurrent] = useState(currentIndex);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowLeft") {
+        goToPreviousImage();
+      } else if (e.key === "ArrowRight") {
+        goToNextImage();
+      } else if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden"; // Disable scrolling when modal is open
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = ""; // Re-enable scrolling when modal is closed
+    };
+  }, [current]); // Ensure the effect runs whenever current changes
 
   const goToPreviousImage = () => {
     setCurrent((prevIndex) =>
@@ -29,7 +48,7 @@ const Modal = ({ images, onClose, currentIndex, setSelectedImageIndex }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          className="absolute right-3 lg:right-7 top-0 lg:top-2 text-white text-sm lg:text-lg hover:text-primary"
+          className="absolute right-3 md:right-7 lg:right-7 top-0 md:top-3 lg:top-2 text-white text-sm lg:text-lg hover:text-primary"
           onClick={onClose}
         >
           <FaTimes />
@@ -53,7 +72,7 @@ const Modal = ({ images, onClose, currentIndex, setSelectedImageIndex }) => {
         />
         <div className="text-white flex items-center justify-between text-sm p-2">
           <div className="flex items-center">
-            <span>{images[current].description.split(" · ")[0]}</span>
+            <span>{images[current].title.split(" · ")[0]}</span>
             <a
               href={images[current].liveUrl}
               target="_blank"
@@ -73,14 +92,8 @@ const Modal = ({ images, onClose, currentIndex, setSelectedImageIndex }) => {
 };
 
 const ImageGallery = () => {
-  const categories = [
-    "All categories",
-    "Shoes",
-    "Bags",
-    "Electronics",
-    "Gaming",
-  ];
-  const [activeCategory, setActiveCategory] = useState("All categories");
+  const categories = ["All Projects", "Shoes", "Bags", "Electronics", "Gaming"];
+  const [activeCategory, setActiveCategory] = useState("All Projects");
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
   const handleImageClick = (index) => {
@@ -90,6 +103,14 @@ const ImageGallery = () => {
   const closeModal = () => {
     setSelectedImageIndex(null);
   };
+
+  useEffect(() => {
+    if (selectedImageIndex !== null) {
+      document.body.style.overflow = "hidden"; // Disable scrolling when modal is open
+    } else {
+      document.body.style.overflow = ""; // Re-enable scrolling when modal is closed
+    }
+  }, [selectedImageIndex]);
 
   return (
     <div>
@@ -101,7 +122,7 @@ const ImageGallery = () => {
             className={`text-sm font-medium px-4 py-2 sm:px-3 sm:py-1.5 me-3 mb-3 rounded-md ${
               activeCategory === category
                 ? "text-white bg-primary"
-                : "text-gray-900 bg-white border border-gray-200 hover:border-gray-300"
+                : "text-white hover:text-white border border-primary hover:bg-primary"
             }`}
             onClick={() => setActiveCategory(category)}
           >
@@ -121,25 +142,32 @@ const ImageGallery = () => {
               src={image.src}
               alt=""
             />
-            <div className="absolute top-0 left-0 hidden group-hover:flex items-center justify-center w-full h-full bg-black bg-opacity-50 rounded-lg space-x-2">
-              <button
-                className="p-3 text-white hover:text-white border border-primary hover:bg-primary font-medium rounded-full text-xs sm:text-2xl"
-                onClick={() => window.open(image.githubUrl, "_blank")}
-              >
-                <FaGithub />
-              </button>
-              <button
-                className="p-3 text-white hover:text-white border border-primary hover:bg-primary font-medium rounded-full text-xs sm:text-2xl"
-                onClick={() => window.open(image.liveUrl, "_blank")}
-              >
-                <FaLink />
-              </button>
-              <button
-                className="p-3 text-white hover:text-white border border-primary hover:bg-primary font-medium rounded-full text-xs sm:text-2xl"
-                onClick={() => setSelectedImageIndex(index)}
-              >
-                <FaEye />
-              </button>
+            <div className="absolute top-0 left-0 hidden group-hover:flex items-center justify-center w-full h-full bg-black bg-opacity-50 rounded-lg">
+              <div className="relative group space-x-2 flex flex-col items-center justify-center">
+                <div className="text-white flex items-center justify-between text-sm p-2 font-general">
+                  {image.title}
+                </div>
+                <div className="relative group space-x-2 flex items-center justify-center">
+                  <button
+                    className="p-3 text-white hover:text-white border border-primary hover:bg-primary font-medium rounded-full text-xs sm:text-2xl"
+                    onClick={() => window.open(image.githubUrl, "_blank")}
+                  >
+                    <FaGithub />
+                  </button>
+                  <button
+                    className="p-3 text-white hover:text-white border border-primary hover:bg-primary font-medium rounded-full text-xs sm:text-2xl"
+                    onClick={() => window.open(image.liveUrl, "_blank")}
+                  >
+                    <FaLink />
+                  </button>
+                  <button
+                    className="p-3 text-white hover:text-white border border-primary hover:bg-primary font-medium rounded-full text-xs sm:text-2xl"
+                    onClick={() => setSelectedImageIndex(index)}
+                  >
+                    <FaEye />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         ))}
