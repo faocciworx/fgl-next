@@ -1,7 +1,10 @@
+"use client"
 import Image from "next/image";
 import Navbar from "./components/Navbar/Navbar";
 import TypingAnimation from "./components/TypingAnimation";
-import { FaFacebook, FaLinkedin, FaGithub  } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+import Loading from "./components/Loading/Loading";
+import { useEffect, useState } from "react";
 
 // app/page.js
 export default function Home() {
@@ -11,15 +14,24 @@ export default function Home() {
       icon: <FaFacebook className="social-media-icon" />,
     },
     {
-      href: "https://example.com/twitter",
-      icon: <FaLinkedin  className="social-media-icon" />,
+      href: "https://example.com/linkedin",
+      icon: <FaLinkedin className="social-media-icon" />,
     },
     {
-      href: "https://example.com/twitter",
-      icon: <FaGithub  className="social-media-icon" />,
+      href: "https://example.com/github",
+      icon: <FaGithub className="social-media-icon" />,
     },
     // Add more social media links as needed
   ];
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 3300);
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div className="flex flex-col h-screen">
@@ -32,7 +44,7 @@ export default function Home() {
             Layug
           </h1>
           <div className="flex font-general text-xl lg:text-3xl whitespace-pre text-primary overflow-hidden animate-caret">
-            I'm am&nbsp;
+            I'm a&nbsp;
             <TypingAnimation
               texts={["Web Developer", "Graphic Artist", "Computer Technician"]}
               baseSpeed={100}
@@ -50,7 +62,6 @@ export default function Home() {
           </p>
 
           <div className="flex justify-center space-x-3 cursor-pointer text-left">
-          {/* <div className="flex space-x-3 cursor-pointer"> */}
             {socialMediaLinks.map((link, index) => (
               <div
                 key={index}
