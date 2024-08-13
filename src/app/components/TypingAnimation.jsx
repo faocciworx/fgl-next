@@ -1,7 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const TypingAnimation = ({ texts, baseSpeed = 70, speedVariance = 30, className = "" }) => {
+const TypingAnimation = ({
+  texts,
+  baseSpeed = 70,
+  speedVariance = 30,
+  className = "",
+}) => {
   const [displayedText, setDisplayedText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);

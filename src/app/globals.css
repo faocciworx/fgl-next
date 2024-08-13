@@ -147,7 +147,7 @@ body {
 .wipe-in-left-wrapper {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .wipe-overlay {

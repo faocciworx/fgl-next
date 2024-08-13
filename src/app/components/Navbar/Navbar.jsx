@@ -18,12 +18,28 @@ import Sidebar from "./Sidebar";
 
 // Define navItems at the top level
 const navItems = [
-  { href: "/", label: "Home", icon: <FaHome className="lg:hidden"/> },
+  { href: "/", label: "Home", icon: <FaHome className="lg:hidden" /> },
   { href: "/about", label: "About Me", icon: <FaUser className="lg:hidden" /> },
-  { href: "/resume", label: "Resume", icon: <FaFileAlt className="lg:hidden"/> },
-  { href: "/portfolio", label: "Portfolio", icon: <FaFolderOpen className="lg:hidden"/> },
-  { href: "/certifications", label: "Certifications", icon: <FaCertificate className="lg:hidden"/> },
-  { href: "/contact", label: "Contact", icon: <FaEnvelope className="lg:hidden"/> },
+  {
+    href: "/resume",
+    label: "Resume",
+    icon: <FaFileAlt className="lg:hidden" />,
+  },
+  {
+    href: "/portfolio",
+    label: "Portfolio",
+    icon: <FaFolderOpen className="lg:hidden" />,
+  },
+  {
+    href: "/certifications",
+    label: "Certifications",
+    icon: <FaCertificate className="lg:hidden" />,
+  },
+  {
+    href: "/contact",
+    label: "Contact",
+    icon: <FaEnvelope className="lg:hidden" />,
+  },
 ];
 
 const Navbar = () => {
@@ -40,15 +56,21 @@ const Navbar = () => {
 
   // Social media buttons
   const socialMediaLinks = [
-    { href: "https://example.com/facebook", icon: <FaFacebook className="w-6 h-6"/> },
-    { href: "https://example.com/twitter", icon: <FaTwitter className="w-6 h-6"/> },
+    {
+      href: "https://example.com/facebook",
+      icon: <FaFacebook className="w-6 h-6" />,
+    },
+    {
+      href: "https://example.com/twitter",
+      icon: <FaTwitter className="w-6 h-6" />,
+    },
     // Add more social media links as needed
   ];
 
   return (
     <>
       <nav className="w-full">
-        <div className="w-full items-center py-6 h-5 lg:h-auto">
+        <div className="w-full items-center py-6 h-5 lg:h-auto lg:pb-20">
           <div className="flex items-center space-x-3">
             {/* Mobile menu toggle button */}
             <button
