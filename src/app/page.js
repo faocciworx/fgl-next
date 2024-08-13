@@ -9,15 +9,15 @@ import WipeInLeftAnimation from "./components/Animations/WipeInLeftAnimation";
 export default function Home() {
   const socialMediaLinks = [
     {
-      href: "https://example.com/facebook",
+      href: "https://www.facebook.com/faocci/",
       icon: <FaFacebook className="social-media-icon" />,
     },
     {
-      href: "https://example.com/twitter",
+      href: "https://www.linkedin.com/in/faocci/",
       icon: <FaLinkedin className="social-media-icon" />,
     },
     {
-      href: "https://example.com/twitter",
+      href: "https://github.com/faocciworx",
       icon: <FaGithub className="social-media-icon" />,
     },
     // Add more social media links as needed
@@ -88,18 +88,22 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-2 w-full md:w-3/4 xl:w-2/3">
-              <button
-                type="button"
-                className="text-white border border-primary bg-primary hover:bg-transparent hover:border-primary font-medium rounded-lg text-sm py-2.5 text-center px-5 mb-2 md:mb-0"
-              >
-                Download CV
-              </button>
-              <button
-                type="button"
-                className="text-white hover:text-white border border-primary hover:bg-primary font-medium rounded-lg text-sm py-2.5 text-center px-5"
-              >
-                Hire Me!
-              </button>
+              <a href="/documents/Resume/Layug, Faocci Ghaize -CV.pdf" download>
+                <button
+                  type="button"
+                  className="text-white border border-primary bg-primary hover:bg-transparent hover:border-primary font-medium rounded-lg text-sm py-2.5 text-center px-5 mb-2 md:mb-0"
+                >
+                  Download CV
+                </button>
+              </a>
+              <a href="/contact">
+                <button
+                  type="button"
+                  className="text-white hover:text-white border border-primary hover:bg-primary font-medium rounded-lg text-sm py-2.5 text-center px-5"
+                >
+                  Hire Me!
+                </button>
+              </a>
             </div>
           </div>
         </div>
