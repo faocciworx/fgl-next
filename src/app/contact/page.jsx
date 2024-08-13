@@ -1,10 +1,11 @@
-import CloseButton from "../components/Closebutton";
+import CloseBtn from "../components/CloseBtn";
 import ContactForm from "../components/Contact/ContactForm";
+
 export default function Contact() {
   return (
     <div className="relative flex flex-col font-general px-7">
       <div className="flex justify-end fixed top-4 right-4">
-        <CloseButton />
+        <CloseBtn />
       </div>
       <div className="flex flex-col justify-center items-center my-10 lg:my-20 gap-y-5">
         <h4 className="text-xl text-primary">I'm available for hire</h4>

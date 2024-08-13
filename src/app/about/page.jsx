@@ -1,5 +1,4 @@
 "use client";
-import CloseButton from "../components/Closebutton";
 import ClickableImageModal from "../components/PictureEffect/ClickableImageModal";
 import {
   AiOutlineHtml5,
@@ -7,14 +6,14 @@ import {
   AiOutlinePicture,
 } from "react-icons/ai";
 import Testimonials from "../components/Testimonials";
+import CloseBtn from "../components/CloseBtn";
+import WipeInRightAnimation from "../components/Animations/WipeInRightAnimation";
 
 export default function About() {
   return (
     <div className="relative flex flex-col font-general px-7">
-      <div className="flex justify-end fixed top-4 right-4">
-        <CloseButton />
-      </div>
       <div className="flex flex-col justify-center items-center my-10 lg:my-20 gap-y-5">
+        <WipeInRightAnimation duration="2.5s" />
         <h4 className="text-xl text-primary">Who I Am</h4>
         <h2 className="text-5xl font-semibold">About Me</h2>
         <hr className="w-28 mx-auto my-4 border-t-2 border-primary" />
@@ -164,6 +163,9 @@ export default function About() {
           </h1>
           <Testimonials />
         </div>
+      </div>
+      <div className="flex justify-end fixed top-4 right-4">
+        <CloseBtn />
       </div>
     </div>
   );

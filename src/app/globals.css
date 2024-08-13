@@ -74,3 +74,139 @@ body {
   ---tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
+
+
+/* Loading */
+
+#jpreOverlay {
+	background-color: #000000;
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+#jpreSlide{
+	font-size:22px;
+	color:#ccc;
+	text-align:center;
+	width:50%;
+	height:30%;
+}
+#jpreLoader{
+	width:100%;
+	height:2px;
+	background:#111;
+}
+
+#jpreBar {
+	background: #ff013d;
+}
+
+#jprePercentage {
+	z-index:-1;
+	font-weight: bold;
+	text-align:center;
+	margin-top:10px;
+	font-size:160px;
+	margin-top:-10px;
+	letter-spacing: -8px;
+	color:rgba(255,255,255,.1);
+}
+
+#jSplash{
+	line-height:200%;
+}
+
+#jSplash section{
+	padding:0;
+	display:block;
+	background:none !important;
+}
+
+.j-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Or whatever background color you prefer */
+  z-index: 9999; /* Ensure it's on top of other content */
+}
+
+/* Page Transition */
+/* WipeinLeft Animation */
+
+@keyframes wipe-in-left {
+  from {
+    clip-path: inset(0 100% 0 0 );
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.wipe-in-left-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wipe-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999; /* Ensures it is above other content */
+  background-color: #ff013d; /* Blank screen color */
+  animation: wipe-in-left 2.5s cubic-bezier(.25, 1, .30, 1) forwards; /* Adjust duration as needed */
+}
+
+.wipe-in-left-content {
+  position: relative;
+  z-index: 1; /* Ensure it is above the overlay */
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.wipe-in-left-content.hidden {
+  opacity: 0; /* Hide content initially */
+}
+
+/* WipeInRightAnimation */
+
+@keyframes wipe-in-right {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.wipe-in-right-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.animation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999; /* Ensures it is above other content */
+  background-color: #ff013d; /* Blank screen color */
+  animation: wipe-in-right 2.5s cubic-bezier(.25, 1, .30, 1) forwards; /* Adjust duration as needed */
+}
+
+.wipe-in-right-content {
+  position: relative;
+  z-index: 1; /* Ensure it is above the overlay */
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.wipe-in-right-content.hidden {
+  opacity: 0; /* Hide content initially */
+}

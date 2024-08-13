@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar/Navbar";
 import TypingAnimation from "./components/TypingAnimation";
-import { FaFacebook, FaLinkedin, FaGithub  } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+import JLoading from "./components/JLoading/JLoading";
+import WipeInLeftAnimation from "./components/Animations/WipeInLeftAnimation";
 
 // app/page.js
 export default function Home() {
@@ -12,17 +14,19 @@ export default function Home() {
     },
     {
       href: "https://example.com/twitter",
-      icon: <FaLinkedin  className="social-media-icon" />,
+      icon: <FaLinkedin className="social-media-icon" />,
     },
     {
       href: "https://example.com/twitter",
-      icon: <FaGithub  className="social-media-icon" />,
+      icon: <FaGithub className="social-media-icon" />,
     },
     // Add more social media links as needed
   ];
 
   return (
     <div className="flex flex-col h-screen">
+      <WipeInLeftAnimation duration="2.5s" />
+      {/* <JLoading/> */}
       <Navbar />
       <div className="flex flex-col-reverse md:flex-row justify-center items-center flex-1 py-10">
         <div className="flex flex-col items-left md:items-start justify-center w-full md:w-1/2 gap-y-4 px-4">
@@ -50,7 +54,7 @@ export default function Home() {
           </p>
 
           <div className="flex justify-center space-x-3 cursor-pointer text-left">
-          {/* <div className="flex space-x-3 cursor-pointer"> */}
+            {/* <div className="flex space-x-3 cursor-pointer"> */}
             {socialMediaLinks.map((link, index) => (
               <div
                 key={index}

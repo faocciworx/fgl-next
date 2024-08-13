@@ -1,4 +1,4 @@
-import CloseButton from "../components/Closebutton";
+import CloseBtn from "../components/CloseBtn";
 import {
   AiOutlineHtml5,
   AiOutlineCode,
@@ -8,14 +8,10 @@ import {
 export default function Resume() {
   return (
     <div className="relative flex flex-col font-general px-7">
-      <div className="flex justify-end fixed top-4 right-4">
-        <CloseButton />
-      </div>
       <div className="flex flex-col justify-center items-center my-10 lg:my-20 gap-y-5">
         <h4 className="text-xl text-primary">I'm available for hire</h4>
         <h2 className="text-5xl font-semibold">My Resume</h2>
         <hr className="w-28 mx-auto my-4 border-t-2 border-primary" />
-
         {/* Timeline Section Start */}
         <div className="flex flex-col lg:flex-row md:gap-x-16 2xl:gap-x-64 font-general">
           <div className="flex flex-col w-full lg:w-fit lg:p-4">
@@ -388,6 +384,9 @@ export default function Resume() {
           </div>
         </div>
         {/* Applications Used End */}
+      </div>
+      <div className="flex justify-end fixed top-4 right-4">
+        <CloseBtn/>
       </div>
     </div>
   );

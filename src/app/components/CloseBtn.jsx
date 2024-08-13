@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { FaTimes } from 'react-icons/fa';
+import Link from "next/link";
+import { FaTimes } from "react-icons/fa";
 
-const CloseButton = () => {
+const CloseBtn = () => {
   return (
     <Link href="/" passHref>
       <button className="h-7 w-7">
@@ -11,4 +11,4 @@ const CloseButton = () => {
   );
 };
 
-export default CloseButton;
+export default CloseBtn;

@@ -136,7 +136,7 @@ const CertificationsGallery = () => {
                       src={certification.src}
                       alt=""
                     />
-                    <div className="z-10 gap-y-1 overflow-hidden leading-6 absolute bottom-4 left-3 sm:left-4 md:left-5 lg:left-5 xl:left-5 bg-primary text-white font-medium rounded-md text-sm py-1 px-5 text-center">
+                    <div className=" gap-y-1 overflow-hidden leading-6 absolute bottom-4 left-3 sm:left-4 md:left-5 lg:left-5 xl:left-5 bg-primary text-white font-medium rounded-md text-sm py-1 px-5 text-center">
                       {certification.date}
                     </div>
                   </div>
