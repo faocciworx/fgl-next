@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import useMediaQuery from "./useMediaQuery"; // Adjust the path as needed
 
 const testimonials = [
   {
@@ -6,60 +7,69 @@ const testimonials = [
     text: "Faocci's creative touch transformed our website into a visual masterpiece! His expertise in web design brought our brand to life, and the responsive layout ensures a seamless user experience.",
     name: "Janpros Lusung",
     position: "Customer",
-    image: "https://pagedone.io/asset/uploads/1696229969.png",
+    image: "/people/Janpros.jpg",
   },
   {
     id: 2,
     text: "Faocci's graphic design skills are unparalleled. His eye for detail and creativity shine through every project. Our marketing materials now stand out, thanks to his stunning visuals created with precision.",
     name: "Nathaniel Nicdao",
     position: "Customer",
-    image: "https://pagedone.io/asset/uploads/1696229994.png",
+    image: "/people/Nathaniel.jpg",
   },
   {
     id: 3,
     text: "When our office faced a technical crisis, Faocci's swift and efficient troubleshooting saved the day. His expertise as a computer technician is unmatched, providing timely solutions that keep our operations running smoothly.",
     name: "Ashley Joss",
     position: "Customer",
-    image: "https://pagedone.io/asset/uploads/1696230027.png",
+    image: "/people/Joss.jpg",
   },
   {
     id: 4,
     text: "Faocci's commitment to data security is commendable. His backup solutions have given us peace of mind, ensuring our critical information is protected. His security measures have made our digital space resilient against potential threats.",
     name: "Jay Ryan Tiongson",
     position: "Customer",
-    image: "https://pagedone.io/asset/uploads/1696230027.png",
+    image: "/people/Jryan.jpg",
   },
   {
     id: 5,
     text: "Faocci's strategic IT insights have been a game-changer for our business. His consulting services not only aligned our technology with our goals but also optimized our operations. Now, we're more efficient and future-ready.",
     name: "Senen Dulu",
     position: "Customer",
-    image: "https://pagedone.io/asset/uploads/1696230027.png",
+    image: "/people/Senen.jpg",
   },
   {
     id: 6,
     text: "Faocci's computer literacy was empowering. His patient guidance helped our team enhance their skills, from basic troubleshooting to mastering new software. Now, we're more confident and proficient in our daily tasks.",
     name: "Arvy Manaloto",
     position: "Customer",
-    image: "https://pagedone.io/asset/uploads/1696230027.png",
+    image: "/people/Arvy.jpg",
   },
 ];
 
 const Testimonial = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const testimonialsRef = useRef(null);
+  const startX = useRef(0);
+  const [touchStart, setTouchStart] = useState(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [isInteracting, setIsInteracting] = useState(false);
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
   const itemsPerPage = isSmallScreen ? 1 : 3;
+  const autoplayInterval = 3000; // Interval for autoplay in milliseconds
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide(
-        (prevSlide) =>
-          (prevSlide + 1) % Math.ceil(testimonials.length / itemsPerPage)
-      );
-    }, 2500);
+    let interval;
+    if (!isInteracting) {
+      interval = setInterval(() => {
+        setCurrentSlide(
+          (prevSlide) =>
+            (prevSlide + 1) % Math.ceil(testimonials.length / itemsPerPage)
+        );
+      }, autoplayInterval);
+    }
+
     return () => clearInterval(interval);
-  }, [isSmallScreen, itemsPerPage]);
+  }, [isInteracting, itemsPerPage]);
 
   const goToSlide = (slideIndex) => {
     setCurrentSlide(slideIndex);
@@ -79,11 +89,11 @@ const Testimonial = () => {
       className={`px-4 ${isSmallScreen ? "w-auto" : "w-full"}`}
       style={{ width: calculateItemWidth() }}
     >
-      <div className="group p-1 md:p-4 lg:p-6 transition-all duration-500 font-general text-white">
+      <div className="group p-1 md:p-4 lg:p-6 transition-all duration-700 font-general text-white">
         <div>
-          <blockquote class="text-base leading-6 transition-all italic font-semibold">
+          <blockquote className="text-base leading-6 transition-all italic font-semibold">
             <svg
-              class="w-8 h-8 text-primary rotate-180 mb-4"
+              className="w-8 h-8 text-primary rotate-180 mb-4"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -113,13 +123,85 @@ const Testimonial = () => {
     </div>
   );
 
+  const handleTouchStart = (e) => {
+    setTouchStart(e.touches[0].clientX);
+    setIsInteracting(true);
+  };
+
+  const handleTouchEnd = (e) => {
+    const touchEnd = e.changedTouches[0].clientX;
+    const touchDiff = touchStart - touchEnd;
+
+    if (Math.abs(touchDiff) > 50) {
+      if (touchDiff > 0) {
+        // Swipe left
+        setCurrentSlide(
+          (prevSlide) =>
+            (prevSlide + 1) % Math.ceil(testimonials.length / itemsPerPage)
+        );
+      } else {
+        // Swipe right
+        setCurrentSlide(
+          (prevSlide) =>
+            (prevSlide - 1 + Math.ceil(testimonials.length / itemsPerPage)) %
+            Math.ceil(testimonials.length / itemsPerPage)
+        );
+      }
+    }
+    setIsInteracting(false);
+  };
+
+  const handleMouseDown = (e) => {
+    startX.current = e.clientX;
+    setIsDragging(true);
+    setIsInteracting(true);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    const currentX = e.clientX;
+    const diffX = startX.current - currentX;
+    if (Math.abs(diffX) > 50) {
+      if (diffX > 0) {
+        // Dragged left
+        setCurrentSlide(
+          (prevSlide) =>
+            (prevSlide + 1) % Math.ceil(testimonials.length / itemsPerPage)
+        );
+      } else {
+        // Dragged right
+        setCurrentSlide(
+          (prevSlide) =>
+            (prevSlide - 1 + Math.ceil(testimonials.length / itemsPerPage)) %
+            Math.ceil(testimonials.length / itemsPerPage)
+        );
+      }
+      setIsDragging(false);
+      setIsInteracting(false);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    setIsInteracting(false);
+  };
+
   return (
     <section className="mb-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-12">
         <div ref={testimonialsRef} className="mb-16 text-center"></div>
-        <div className="relative overflow-hidden">
+        <div
+          className={`relative overflow-hidden cursor-${
+            isDragging ? "grabbing" : "grab"
+          }`}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+        >
           <div
-            className="flex transition-transform duration-500"
+            className="flex transition-transform duration-700"
             style={{
               transform: `translateX(-${
                 currentSlide *
@@ -150,20 +232,3 @@ const Testimonial = () => {
 };
 
 export default Testimonial;
-
-function useMediaQuery(query) {
-  const [matches, setMatches] = useState(window.matchMedia(query).matches);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(query);
-    const handleChange = () => {
-      setMatches(mediaQuery.matches);
-    };
-    mediaQuery.addEventListener("change", handleChange);
-    return () => {
-      mediaQuery.removeEventListener("change", handleChange);
-    };
-  }, [query]);
-
-  return matches;
-}
