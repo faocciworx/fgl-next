@@ -1,11 +1,13 @@
 "use client";
 import Head from "next/head";
 import ClickableImageModal from "../components/PictureEffect/ClickableImageModal";
-import {
-  AiOutlineHtml5,
-  AiOutlineCode,
-  AiOutlinePicture,
-} from "react-icons/ai";
+import { AiOutlineHtml5 } from "react-icons/ai";
+import { FiPenTool } from "react-icons/fi";
+import { FaComputer } from "react-icons/fa6";
+import { SiGoogledocs } from "react-icons/si";
+import { LuDatabaseBackup } from "react-icons/lu";
+import { MdOutlineSecurity } from "react-icons/md";
+
 import Testimonials from "../components/Testimonials";
 import CloseBtn from "../components/CloseBtn";
 import WipeInRightAnimation from "../components/Animations/WipeInRightAnimation";
@@ -67,6 +69,8 @@ export default function About() {
           <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] border-[#FFFFFF33] rounded inline-block text-center p-3 mt-8 lg:mt-40">
             My Services
           </h1>
+
+          {/* First Three */}
           <div className="flex flex-col lg:flex-row pt-8 lg:pt-10 lg:p-4 gap-x-2 items-start">
             <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
               <div className="service-container flex items-center">
@@ -86,7 +90,7 @@ export default function About() {
             <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
               <div className="service-container flex items-center">
                 <div className="mr-4 flex items-center justify-center self-start font-general">
-                  <AiOutlineCode className="h-12 w-12 text-primary" />
+                  <FiPenTool className="h-12 w-12 text-primary" />
                 </div>
                 <div className="flex flex-col">
                   <h1 className="text-xl mb-2 font-bold">Graphic Design</h1>
@@ -101,7 +105,7 @@ export default function About() {
             <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
               <div className="service-container flex items-center">
                 <div className="mr-4 flex items-center justify-center self-start">
-                  <AiOutlinePicture className="h-12 w-12 text-primary" />
+                  <FaComputer className="h-12 w-12 text-primary" />
                 </div>
                 <div className="flex flex-col">
                   <h1 className="text-xl mb-2 font-bold">
@@ -115,11 +119,13 @@ export default function About() {
               </div>
             </div>
           </div>
+
+          {/* Second Three */}
           <div className="flex flex-col lg:flex-row lg:p-4 gap-x-2 items-start">
             <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
               <div className="service-container flex items-center">
                 <div className="mr-4 flex items-center justify-center self-start">
-                  <AiOutlineHtml5 className="h-12 w-12 text-primary" />
+                  <SiGoogledocs className="h-10 w-12 text-primary" />
                 </div>
                 <div className="flex flex-col">
                   <h1 className="text-xl mb-2 font-bold">Computer Literate</h1>
@@ -135,7 +141,7 @@ export default function About() {
             <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
               <div className="service-container flex items-center">
                 <div className="mr-4 flex items-center justify-center self-start font-general">
-                  <AiOutlineCode className="h-12 w-12 text-primary" />
+                  <LuDatabaseBackup className="h-12 w-12 text-primary" />
                 </div>
                 <div className="flex flex-col">
                   <h1 className="text-xl mb-2 font-bold">Backup & Security</h1>
@@ -150,7 +156,7 @@ export default function About() {
             <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
               <div className="service-container flex items-center">
                 <div className="mr-4 flex items-center justify-center self-start">
-                  <AiOutlinePicture className="h-12 w-12 text-primary" />
+                  <MdOutlineSecurity className="h-12 w-12 text-primary" />
                 </div>
                 <div className="flex flex-col">
                   <h1 className="text-xl mb-2 font-bold">IT Consultancy</h1>
@@ -163,8 +169,9 @@ export default function About() {
               </div>
             </div>
           </div>
+
           <div className="relative">
-            <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] border-[#FFFFFF33] rounded inline-block text-center p-3 mt-2 lg:mt-16">
+            <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] border-[#FFFFFF33] rounded inline-block text-center p-3 mt-2 md:mt-10 lg:mt-16">
               Testimonials
             </h1>
             <Testimonials />
