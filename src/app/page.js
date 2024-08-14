@@ -4,6 +4,7 @@ import TypingAnimation from "./components/TypingAnimation";
 import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 import JLoading from "./components/JLoading/JLoading";
 import WipeInLeftAnimation from "./components/Animations/WipeInLeftAnimation";
+import JParticles from "./components/JParticles";
 
 // app/page.js
 export default function Home() {
@@ -24,30 +25,31 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative flex flex-col font-general items-center justify-center min-h-screen ">
+    <div className="relative flex flex-col items-center justify-center min-h-screen bg-background">
       <JLoading />
       <WipeInLeftAnimation duration="2.5s">
         <Navbar />
-        <div className="flex flex-col md:flex-row justify-center items-center flex-1 py-10 md:pt-8 lg:pt-10 w-full">
-          <div className="flex justify-center items-center pb-5 w-full md:w-1/2 md:order-1">
+        <JParticles />
+        <div className="flex flex-col lg:flex-row justify-center items-center flex-1 py-10 md:px-5 lg:px-0 lg:pt-10 w-full h-full md:min-h-screen lg:min-h-0">
+          <div className="flex justify-center items-center pb-5 w-full md:w-1/2 lg:order-1">
             <div className="rounded-full overflow-hidden">
               <Image
                 src="/background/Profile.png"
                 width={500}
                 height={500}
                 alt="Faocci Layug Photo"
-                className="w-60 h-64 md:w-50 md:h-auto lg:w-[500px] lg:h-[540px]"
+                className="w-60 h-64 md:w-72 md:h-auto lg:w-[500px] lg:h-[540px]"
               />
             </div>
           </div>
-          <div className="flex flex-col items-center md:items-start justify-center w-full md:w-1/2 gap-y-4 px-4 text-center md:text-left">
-            <h1 className="text-3xl lg:text-5xl font-general font-bold">
+          <div className="flex flex-col items-center lg:items-start justify-center w-full lg:w-1/2 gap-y-4 px-4 text-center md:text-left">
+            <h1 className="text-3xl md:text-5xl lg:text-5xl font-general font-bold">
               I'm&nbsp;
-              <span className="text-primary"> Faocci&nbsp;</span>
+              <span className="text-primary">Faocci&nbsp;</span>
               Layug
             </h1>
-            <div className="flex font-general text-xl lg:text-3xl whitespace-pre text-primary overflow-hidden animate-caret">
-              I'm am&nbsp;
+            <div className="flex font-general text-xl md:text-4xl lg:text-3xl whitespace-pre text-primary overflow-hidden animate-caret">
+              I'm&nbsp;
               <TypingAnimation
                 texts={[
                   "Web Developer ‎ ‎ ",
@@ -59,7 +61,7 @@ export default function Home() {
                 className=""
               />
             </div>
-            <p className="font-general text-white w-full lg:w-11/12 leading-8 text-justify">
+            <p className="font-general text-lg md:text-2xl lg:text-base text-white w-full lg:w-11/12 leading-7 md:leading-10 lg:leading-8 text-justify">
               Hello, I'm Faocci Ghaize O. Layug, a tech and design enthusiast
               ready to bring my expertise to your projects. With a knack for
               creative problem-solving in web and graphic design, and a solid
@@ -68,18 +70,18 @@ export default function Home() {
               impact in the digital sphere together!
             </p>
 
-            <div className="flex justify-center space-x-3 cursor-pointer text-center md:text-left">
+            <div className="flex justify-center space-x-5 cursor-pointer text-center md:text-left">
               {socialMediaLinks.map((link, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-center w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300"
+                  className="flex items-center justify-center w-12 h-12 lg:w-10 lg:h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <a
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-primary transform transition-transform duration-300 hover:scale-110"
+                    className="flex items-center justify-center w-full h-full text-white hover:text-primary transform transition-transform duration-300 hover:scale-110"
                   >
                     {link.icon}
                   </a>
@@ -87,19 +89,23 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="flex flex-col md:flex-row gap-2 w-full md:w-3/4 xl:w-2/3">
-              <a href="/documents/Resume/Layug, Faocci Ghaize -CV.pdf" download>
+            <div className="flex flex-col lg:flex-row gap-2 portrait:md:gap-6 portrait:md:pt-2 w-full lg:w-3/4 xl:w-2/3">
+              <a
+                href="/documents/Resume/Layug, Faocci Ghaize -CV.pdf"
+                download
+                className="w-full md:w-auto"
+              >
                 <button
                   type="button"
-                  className="text-white border border-primary bg-primary hover:bg-transparent hover:border-primary font-medium rounded-lg text-sm py-2.5 text-center px-5 mb-2 md:mb-0"
+                  className="w-full text-white border border-primary bg-primary hover:bg-transparent hover:border-primary font-medium rounded-lg py-2.5 text-center px-5 md:py-4 lg:py-2.5 mb-2 md:mb-0 text-sm md:text-lg lg:text-sm"
                 >
                   Download CV
                 </button>
               </a>
-              <a href="/contact">
+              <a href="/contact" className="w-full md:w-auto">
                 <button
                   type="button"
-                  className="text-white hover:text-white border border-primary hover:bg-primary font-medium rounded-lg text-sm py-2.5 text-center px-5"
+                  className="w-full text-white hover:text-white border border-primary hover:bg-primary font-medium rounded-lg py-2.5 text-center px-5 md:py-4 lg:py-2.5 mb-2 md:mb-0 text-sm md:text-lg lg:text-sm"
                 >
                   Hire Me!
                 </button>

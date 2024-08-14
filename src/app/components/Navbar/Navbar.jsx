@@ -69,8 +69,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full">
-        <div className="w-full items-center py-6 h-5 lg:h-auto lg:pb-20">
+      <nav className="w-full landscape:lg:pt-32 landscape:xl:pt-0 landscape:2xl:pt-0 portrait:lg:pb-40">
+        <div className="w-full items-center py-6 h-5 lg:pb-20">
           <div className="flex items-center space-x-3">
             {/* Mobile menu toggle button */}
             <button

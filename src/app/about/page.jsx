@@ -1,4 +1,5 @@
 "use client";
+import Head from "next/head";
 import ClickableImageModal from "../components/PictureEffect/ClickableImageModal";
 import {
   AiOutlineHtml5,

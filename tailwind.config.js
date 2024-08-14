@@ -13,18 +13,24 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        general: ['"proxima-nova"', 'Helvetica', 'Arial', 'sans-serif'],
-        body: ['"proxima-nova"', 'Helvetica', 'Arial', 'sans-serif'],
+        general: ['"proxima-nova"', "Helvetica", "Arial", "sans-serif"],
+        body: ['"proxima-nova"', "Helvetica", "Arial", "sans-serif"],
       },
       colors: {
-        primary: '#FF013D',
-        'primary-rgb': 'rgb(255, 1, 61)',
+        primary: "#FF013D",
+        "primary-rgb": "rgb(255, 1, 61)",
       },
-      
+
+      screens: {
+        portrait: { raw: "(orientation: portrait)" },
+        landscape: { raw: "(orientation: landscape)" },
+      },
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      padding: ["portrait", "landscape"],
+    },
+  },
   plugins: [],
 };
-
-
