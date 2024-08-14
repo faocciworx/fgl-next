@@ -7,7 +7,6 @@ import { FaComputer } from "react-icons/fa6";
 import { SiGoogledocs } from "react-icons/si";
 import { LuDatabaseBackup } from "react-icons/lu";
 import { MdOutlineSecurity } from "react-icons/md";
-
 import Testimonials from "../components/Testimonials";
 import CloseBtn from "../components/CloseBtn";
 import WipeInRightAnimation from "../components/Animations/WipeInRightAnimation";
@@ -66,12 +65,12 @@ export default function About() {
           </div>
         </div>
         <div className="relative">
-          <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] border-[#FFFFFF33] rounded inline-block text-center p-3 mt-8 lg:mt-40">
+          <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] border-[#FFFFFF33] rounded inline-block text-center p-3 mt-8 landscape:md:mt-0 landscape:2xl:mt-36">
             My Services
           </h1>
 
           {/* First Three */}
-          <div className="flex flex-col lg:flex-row pt-8 lg:pt-10 lg:p-4 gap-x-2 items-start">
+          <div className="flex flex-col md:flex-row lg:flex-row pt-8 lg:pt-10 lg:p-4 gap-x-2 items-start">
             <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
               <div className="service-container flex items-center">
                 <div className="mr-4 flex items-center justify-center self-start">
@@ -121,7 +120,7 @@ export default function About() {
           </div>
 
           {/* Second Three */}
-          <div className="flex flex-col lg:flex-row lg:p-4 gap-x-2 items-start">
+          <div className="flex flex-col md:flex-row lg:flex-row lg:p-4 gap-x-2 items-start md:mt-8 lg:mt-0">
             <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
               <div className="service-container flex items-center">
                 <div className="mr-4 flex items-center justify-center self-start">
