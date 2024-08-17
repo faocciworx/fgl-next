@@ -115,7 +115,7 @@ const CertificationsGallery = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 lg:mb-20 gap-y-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 lg:mb-20">
         {Object.keys(CertificationsData).map((category) =>
           CertificationsData[category].map((certification, index) => (
             <div key={index} className="relative">
