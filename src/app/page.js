@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Navbar from "./components/Navbar/Navbar";
 import TypingAnimation from "./components/TypingAnimation";
@@ -23,6 +24,15 @@ export default function Home() {
     },
     // Add more social media links as needed
   ];
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 3300);
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-background">
