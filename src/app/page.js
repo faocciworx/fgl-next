@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar/Navbar";
 import TypingAnimation from "./components/TypingAnimation";
-import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import JLoading from "./components/JLoading/JLoading";
 import WipeInLeftAnimation from "./components/Animations/WipeInLeftAnimation";
 import JParticles from "./components/JParticles";
@@ -11,11 +11,11 @@ export default function Home() {
   const socialMediaLinks = [
     {
       href: "https://www.facebook.com/faocci/",
-      icon: <FaFacebook className="social-media-icon" />,
+      icon: <FaFacebookF className="social-media-icon" />,
     },
     {
       href: "https://www.linkedin.com/in/faocci/",
-      icon: <FaLinkedin className="social-media-icon" />,
+      icon: <FaLinkedinIn className="social-media-icon" />,
     },
     {
       href: "https://github.com/faocciworx",
