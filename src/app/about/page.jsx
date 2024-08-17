@@ -40,15 +40,15 @@ export default function About() {
           </div>
           <div className="lg:w-1/2 flex flex-col items-start pt-20 lg:pt-2">
             <h1 className="text-2xl lg:text-4xl font-general font-bold">
-              Hello, I'm&nbsp;
+              Hello, I&apos;m&nbsp;
               <span className="text-primary">Faocci Layug</span>
             </h1>
             <p className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify ">
-              Hello, I'm Faocci Ghaize O. Layug, a dedicated individual with a
-              passion for technology and design. My journey in the dynamic
-              intersection of creativity and innovation has driven me to
-              constantly seek new challenges and push the boundaries of what's
-              possible in the digital realm.
+              Hello, I&apos;m Faocci Ghaize O. Layug, a dedicated individual
+              with a passion for technology and design. My journey in the
+              dynamic intersection of creativity and innovation has driven me to
+              constantly seek new challenges and push the boundaries of
+              what&apos;s possible in the digital realm.
             </p>
             <p className="text-sm lg:text-lg font-general mt-4 text-white">
               <span className="text-primary">Residence:&nbsp;</span>
@@ -161,8 +161,8 @@ export default function About() {
                   <h1 className="text-xl mb-2 font-bold">IT Consultancy</h1>
                   <p className="text-sm ">
                     I specialize in enhancing business efficiency through
-                    strategic IT solutions. Let's navigate the tech landscape
-                    together for your success.
+                    strategic IT solutions. Let&apos;s navigate the tech
+                    landscape together for your success.
                   </p>
                 </div>
               </div>
