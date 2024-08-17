@@ -44,12 +44,12 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center lg:items-start justify-center w-full lg:w-1/2 gap-y-4 px-4 text-center md:text-left">
             <h1 className="text-3xl md:text-5xl lg:text-5xl font-general font-bold">
-              I'm&nbsp;
+              I&apos;m&nbsp;
               <span className="text-primary">Faocci&nbsp;</span>
               Layug
             </h1>
             <div className="flex font-general text-xl md:text-4xl lg:text-3xl whitespace-pre text-primary overflow-hidden animate-caret">
-              I'm&nbsp;
+              I&apos;m&nbsp;
               <TypingAnimation
                 texts={[
                   "Web Developer ‎ ‎ ",
@@ -62,12 +62,12 @@ export default function Home() {
               />
             </div>
             <p className="font-general text-lg md:text-2xl lg:text-base text-white w-full lg:w-11/12 leading-7 md:leading-10 lg:leading-8 text-justify">
-              Hello, I'm Faocci Ghaize O. Layug, a tech and design enthusiast
-              ready to bring my expertise to your projects. With a knack for
-              creative problem-solving in web and graphic design, and a solid
-              foundation in computer technology, I'm excited to contribute to a
-              team that values innovation and excellence. Let's make a positive
-              impact in the digital sphere together!
+              Hello, I&apos;m Faocci Ghaize O. Layug, a tech and design
+              enthusiast ready to bring my expertise to your projects. With a
+              knack for creative problem-solving in web and graphic design, and
+              a solid foundation in computer technology, I&apos;m excited to
+              contribute to a team that values innovation and excellence.
+              Let&apos;s make a positive impact in the digital sphere together!
             </p>
 
             <div className="flex justify-center space-x-5 cursor-pointer text-center md:text-left">

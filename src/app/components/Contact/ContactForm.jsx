@@ -123,10 +123,10 @@ const ContactForm = () => {
   return (
     <div className="grid sm:grid-cols-2 items-start gap-8 mx-auto max-w-7xl font-general">
       <div>
-        <h1 className="text-xl font-general font-bold">Let's Talk</h1>
+        <h1 className="text-xl font-general font-bold">Let&apos;s Talk</h1>
         <p className="text-sm mt-3 leading-7">
           Have some big idea or brand to develop and need help? Then reach out,
-          we'd love to hear about your project and provide help.
+          we&apos;d love to hear about your project and provide help.
         </p>
         <div className="mt-7 md:mt-12 xl:mt-12 2xl:mt-12">
           <h2 className="text-xl font-general font-bold">Email</h2>
@@ -182,7 +182,7 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit} className="w-full ml-auto space-y-4 mb-14">
         <h1 className="text-xl font-general font-bold">Get in Touch</h1>
         <p className="text-sm mt-3 leading-7">
-          Got a big idea? Let's bring it to life. Contact me today!
+          Got a big idea? Let&apos;s bring it to life. Contact me today!
         </p>
 
         <div>
