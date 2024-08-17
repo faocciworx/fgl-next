@@ -6,6 +6,7 @@ import ImageData from "./ImageData";
 
 const Modal = ({ images, onClose, currentIndex, setSelectedImageIndex }) => {
   const [current, setCurrent] = useState(currentIndex);
+  const [touchStartX, setTouchStartX] = useState(null);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -18,13 +19,37 @@ const Modal = ({ images, onClose, currentIndex, setSelectedImageIndex }) => {
       }
     };
 
+    const handleTouchStart = (e) => {
+      setTouchStartX(e.touches[0].clientX);
+    };
+
+    const handleTouchMove = (e) => {
+      if (!touchStartX) return;
+
+      const touchEndX = e.touches[0].clientX;
+      const touchDiff = touchStartX - touchEndX;
+
+      if (touchDiff > 50) {
+        goToNextImage();
+        setTouchStartX(null); // Reset touchStartX after swipe
+      } else if (touchDiff < -50) {
+        goToPreviousImage();
+        setTouchStartX(null); // Reset touchStartX after swipe
+      }
+    };
+
     window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchmove", handleTouchMove);
     document.body.style.overflow = "hidden"; // Disable scrolling when modal is open
+
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
       document.body.style.overflow = ""; // Re-enable scrolling when modal is closed
     };
-  }, [current]); // Ensure the effect runs whenever current changes
+  }, [current, touchStartX]); // Ensure the effect runs whenever current changes
 
   const goToPreviousImage = () => {
     setCurrent((prevIndex) =>
@@ -54,13 +79,13 @@ const Modal = ({ images, onClose, currentIndex, setSelectedImageIndex }) => {
           <FaTimes />
         </button>
         <button
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-base lg:text-3xl hover:text-primary"
+          className="absolute left-0 top-36 md:top-60 lg:top-60 2xl:top-60 transform -translate-y-1/2 text-white text-base lg:text-3xl hover:text-primary"
           onClick={goToPreviousImage}
         >
           <BiSolidLeftArrow />
         </button>
         <button
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-base lg:text-3xl hover:text-primary"
+          className="absolute right-0 top-36 md:top-60 lg:top-60 2xl:top-60 transform -translate-y-1/2 text-white text-base lg:text-3xl hover:text-primary"
           onClick={goToNextImage}
         >
           <BiSolidRightArrow />
@@ -70,19 +95,24 @@ const Modal = ({ images, onClose, currentIndex, setSelectedImageIndex }) => {
           alt=""
           className="w-full rounded-lg mb-2 sm:mb-0"
         />
-        <div className="text-white flex items-center justify-between text-sm p-2">
-          <div className="flex items-center">
-            <span>{images[current].title.split(" · ")[0]}</span>
+        <div className="font-general text-white text-sm p-4">
+          <div className="flex flex-col items-center space-x-2">
+            <span className="text-primary hover:underline font-bold">
+              {images[current].title.split("·")[0]}
+            </span>
+            <span className="text-center">
+              {images[current].description.split(" · ")[0]}
+            </span>
             <a
               href={images[current].liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-2 text-primary"
+              className="text-primary hover:underline"
             >
               View Details
             </a>
           </div>
-          <div>
+          <div className="text-center">
             {current + 1} / {images.length}
           </div>
         </div>
@@ -92,7 +122,17 @@ const Modal = ({ images, onClose, currentIndex, setSelectedImageIndex }) => {
 };
 
 const ImageGallery = () => {
-  const categories = ["All Projects", "Shoes", "Bags", "Electronics", "Gaming"];
+  const categories = [
+    "All Projects",
+    "Web",
+    "Mockups",
+    "Logo",
+    "Digital Art",
+    "Poster",
+    "Cover",
+    "Presentation",
+    "Others",
+  ];
   const [activeCategory, setActiveCategory] = useState("All Projects");
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
@@ -144,19 +184,16 @@ const ImageGallery = () => {
             />
             <div className="absolute top-0 left-0 hidden group-hover:flex items-center justify-center w-full h-full bg-black bg-opacity-50 rounded-lg">
               <div className="relative group space-x-2 flex flex-col items-center justify-center">
-                <div className="text-white flex items-center justify-between text-sm p-2 font-general">
+                <div className="text-white flex items-center justify-between text-sm p-2 text-center font-general">
                   {image.title}
                 </div>
                 <div className="relative group space-x-2 flex items-center justify-center">
                   <button
                     className="p-3 text-white hover:text-white border border-primary hover:bg-primary font-medium rounded-full text-xs sm:text-2xl"
-                    onClick={() => window.open(image.githubUrl, "_blank")}
-                  >
-                    <FaGithub />
-                  </button>
-                  <button
-                    className="p-3 text-white hover:text-white border border-primary hover:bg-primary font-medium rounded-full text-xs sm:text-2xl"
-                    onClick={() => window.open(image.liveUrl, "_blank")}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(image.liveUrl, "_blank");
+                    }}
                   >
                     <FaLink />
                   </button>
