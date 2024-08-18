@@ -53,11 +53,7 @@ const ClickableImageModal = ({
         className={`cursor-pointer transition-transform transform-gpu hover:scale-110 ${imageClassName}`}
         onClick={handleClick}
       >
-        <img
-          src={imageUrl}
-          className={`object-cover`}
-          alt="Your Image"
-        />
+        <img src={imageUrl} className={`object-cover`} alt="Your Image" />
       </div>
 
       {/* Modal Content */}
@@ -89,7 +85,9 @@ const ClickableImageModal = ({
           <div className="overflow-hidden">
             <img
               src={imageUrl}
-              className={`w-auto h-auto transition-transform duration-300 ${zoomed ? "scale-150" : ""}`}
+              className={`w-auto h-auto transition-transform duration-300 ${
+                zoomed ? "scale-150" : ""
+              }`}
               alt="Your Image"
             />
           </div>

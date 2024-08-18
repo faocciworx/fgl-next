@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import Navbar from "./components/Navbar/Navbar";
 import TypingAnimation from "./components/TypingAnimation";
@@ -5,9 +7,11 @@ import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import JLoading from "./components/JLoading/JLoading";
 import WipeInLeftAnimation from "./components/Animations/WipeInLeftAnimation";
 import JParticles from "./components/JParticles";
+import HomeSkeleton from "./components/Skeleton/HomeSkeleton";
 
-// app/page.js
 export default function Home() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   const socialMediaLinks = [
     {
       href: "https://www.facebook.com/faocci/",
@@ -21,7 +25,6 @@ export default function Home() {
       href: "https://github.com/faocciworx",
       icon: <FaGithub className="social-media-icon" />,
     },
-    // Add more social media links as needed
   ];
 
   return (
@@ -32,13 +35,23 @@ export default function Home() {
         <JParticles />
         <div className="flex flex-col lg:flex-row justify-center items-center flex-1 py-10 md:px-5 lg:px-0 lg:pt-10 w-full h-full md:min-h-screen lg:min-h-0">
           <div className="flex justify-center items-center pb-5 w-full md:w-1/2 lg:order-1">
-            <div className="rounded-full overflow-hidden">
+            <div className="rounded-full overflow-hidden relative">
+              {!imageLoaded && (
+                <HomeSkeleton
+                  width="500px"
+                  height="540px"
+                  className="w-60 h-64 md:w-72 md:h-auto lg:w-[500px] lg:h-[540px] absolute inset-0"
+                />
+              )}
               <Image
                 src="/background/Profile.png"
                 width={500}
                 height={500}
                 alt="Faocci Layug Photo"
-                className="w-60 h-64 md:w-72 md:h-auto lg:w-[500px] lg:h-[540px]"
+                className={`w-60 h-64 md:w-72 md:h-auto lg:w-[500px] lg:h-[540px] transition-opacity duration-500 ${
+                  imageLoaded ? "opacity-100" : "opacity-0"
+                }`}
+                onLoadingComplete={() => setImageLoaded(true)}
               />
             </div>
           </div>
