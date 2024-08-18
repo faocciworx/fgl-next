@@ -110,7 +110,7 @@ export default function Home() {
               >
                 <button
                   type="button"
-                  className="w-full text-white border border-primary bg-primary hover:bg-transparent hover:border-primary font-medium rounded-lg py-2.5 text-center px-5 md:py-4 lg:py-2.5 mb-2 md:mb-0 text-sm md:text-lg lg:text-sm"
+                  className="w-full text-white border border-primary bg-primary hover:bg-transparent 2xl:hover:animate-bounce hover:border-primary font-medium rounded-lg py-2.5 text-center px-5 md:py-4 lg:py-2.5 mb-2 md:mb-0 text-sm md:text-lg lg:text-sm"
                 >
                   Download CV
                 </button>
@@ -118,7 +118,7 @@ export default function Home() {
               <a href="/contact" className="w-full md:w-auto">
                 <button
                   type="button"
-                  className="w-full text-white hover:text-white border border-primary hover:bg-primary font-medium rounded-lg py-2.5 text-center px-5 md:py-4 lg:py-2.5 mb-2 md:mb-0 text-sm md:text-lg lg:text-sm"
+                  className="w-full text-white hover:text-white border border-primary 2xl:hover:animate-bounce hover:bg-primary font-medium rounded-lg py-2.5 text-center px-5 md:py-4 lg:py-2.5 mb-2 md:mb-0 text-sm md:text-lg lg:text-sm"
                 >
                   Hire Me!
                 </button>
