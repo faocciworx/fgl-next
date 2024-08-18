@@ -91,7 +91,7 @@ const Navbar = () => {
             <Link href="#">
               <div className="flex items-center space-x-3 cursor-pointer">
                 <span className="self-center text-2xl font-semibold whitespace-nowrap">
-                  FGL
+                  FGOL
                 </span>
               </div>
             </Link>
