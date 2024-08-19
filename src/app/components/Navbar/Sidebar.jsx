@@ -20,7 +20,7 @@ const Sidebar = ({ isOpen, closeMenu, navItems }) => {
         <div className="flex justify-between items-center">
           <Link href="/" passHref>
             <div className="flex items-center space-x-3 cursor-pointer">
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              <span className="self-center hover:text-primary text-2xl font-semibold whitespace-nowrap dark:text-white">
                 <button href="/">FGOL</button>
               </span>
             </div>

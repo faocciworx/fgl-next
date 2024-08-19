@@ -90,7 +90,7 @@ const Navbar = () => {
             {/* Brand */}
             <Link href="#">
               <div className="flex items-center space-x-3 cursor-pointer">
-                <span className="self-center text-2xl font-semibold whitespace-nowrap">
+                <span className="self-center hover:text-primary text-2xl font-semibold whitespace-nowrap">
                   <button href="/">FGOL</button>
                 </span>
               </div>
