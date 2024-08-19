@@ -124,7 +124,7 @@ const ContactForm = () => {
     <div className="grid sm:grid-cols-2 items-start gap-8 mx-auto max-w-7xl font-general">
       <div>
         <h1 className="text-xl font-general font-bold">Let&apos;s Talk</h1>
-        <p className="text-sm mt-3 leading-7">
+        <p className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
           Have some big idea or brand to develop and need help? Then reach out,
           we&apos;d love to hear about your project and provide help.
         </p>
@@ -140,7 +140,9 @@ const ContactForm = () => {
                 className="text-white text-sm ml-3"
               >
                 <small className="block text-primary">Mail</small>
-                <strong>faocciworx@gmail.com</strong>
+                <strong className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
+                  faocciworx@gmail.com
+                </strong>
               </a>
             </li>
           </ul>
@@ -181,11 +183,11 @@ const ContactForm = () => {
 
       <form onSubmit={handleSubmit} className="w-full ml-auto space-y-4 mb-14">
         <h1 className="text-xl font-general font-bold">Get in Touch</h1>
-        <p className="text-sm mt-3 leading-7">
+        <p className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
           Got a big idea? Let&apos;s bring it to life. Contact me today!
         </p>
 
-        <div>
+        <div className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
           <input
             id="nameInput"
             type="text"
@@ -193,49 +195,49 @@ const ContactForm = () => {
             placeholder="Your Name"
             value={formData.name}
             onChange={handleChange}
-            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 text-base leading-8 text-gray-100 placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
+            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 leading-8 text-gray-100 placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
           />
           {errors.name && (
             <p className="text-red-500 text-xs mt-1">{errors.name}</p>
           )}
         </div>
 
-        <div>
+        <div className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
           <input
             type="email"
             name="email"
             placeholder="Your Email"
             value={formData.email}
             onChange={handleChange}
-            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 text-base leading-8 text-gray-100 placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
+            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 leading-8 text-gray-100 placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
           />
           {errors.email && (
             <p className="text-red-500 text-xs mt-1">{errors.email}</p>
           )}
         </div>
 
-        <div>
+        <div className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
           <input
             type="text"
             name="subject"
             placeholder="Your Subject"
             value={formData.subject}
             onChange={handleChange}
-            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 text-base leading-8 text-gray-100 placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
+            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 leading-8 text-gray-100 placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
           />
           {errors.subject && (
             <p className="text-red-500 text-xs mt-1">{errors.subject}</p>
           )}
         </div>
 
-        <div>
+        <div className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
           <textarea
             name="message"
             placeholder="Your Message"
             rows="6"
             value={formData.message}
             onChange={handleChange}
-            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 text-base leading-8 text-gray-100 placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
+            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 leading-8 text-gray-100 placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
           ></textarea>
           {errors.message && (
             <p className="text-red-500 text-xs mt-1">{errors.message}</p>

@@ -79,9 +79,12 @@ export default function About() {
                 <div className="flex flex-col">
                   <h1 className="text-xl mb-2 font-bold">Website Design</h1>
                   <p className="text-sm">
-                    Proficient in HTML, CSS, and introductory JavaScript,
-                    Bootstrap for creating and styling web pages. Familiar with
-                    principles of responsive design.
+                    Proficient in HTML, CSS, and introductory JavaScript.
+                    Experienced in using modern tools such as Next.js, React.js,
+                    Vue, Vite, TypeScript, Bootstrap, SASS, and Tailwind CSS for
+                    creating and styling responsive web pages. Skilled in
+                    optimizing performance and ensuring seamless user
+                    experiences across devices.
                   </p>
                 </div>
               </div>
@@ -95,8 +98,11 @@ export default function About() {
                   <h1 className="text-xl mb-2 font-bold">Graphic Design</h1>
                   <p className="text-sm">
                     Skilled in using graphic design tools such as Adobe
-                    Photoshop for image editing and Adobe Illustrator for vector
-                    graphics.
+                    Photoshop for image editing, Adobe Illustrator for vector
+                    graphics, Adobe Premiere for video editing, Adobe InDesign
+                    for layout design, Adobe Lightroom for photo editing, as
+                    well as Figma for UI design and Canva for creating visual
+                    content.
                   </p>
                 </div>
               </div>
@@ -113,6 +119,10 @@ export default function About() {
                   <p className="text-sm ">
                     Experienced in hardware installation, software
                     troubleshooting, and network configuration expertise.
+                    Proficient in OS installation Windows, macOS, Linux,
+                    software installation, and utilizing tools such as Burning
+                    Test, Memtest, Hirens BootCD, and Disk Sentinel for system
+                    diagnostics and maintenance.
                   </p>
                 </div>
               </div>
@@ -129,10 +139,12 @@ export default function About() {
                 <div className="flex flex-col">
                   <h1 className="text-xl mb-2 font-bold">Computer Literate</h1>
                   <p className="text-sm">
-                    Well-versed in operating systems (Windows, MacOS), Microsoft
-                    Office Suite, internet navigation, and basic
-                    troubleshooting. Comfortable with various software
-                    applications.
+                    Well-versed in operating systems Windows, macOS, Microsoft
+                    Office Suite, and internet navigation, with expertise in
+                    basic troubleshooting. Comfortable with various software
+                    applications, including Microsoft Office Suite, WPS Office
+                    Suite, Google Workspace, cloud storage solutions, and email
+                    clients.
                   </p>
                 </div>
               </div>
@@ -145,9 +157,11 @@ export default function About() {
                 <div className="flex flex-col">
                   <h1 className="text-xl mb-2 font-bold">Backup & Security</h1>
                   <p className="text-sm">
-                    Skilled in using graphic design tools such as Adobe
-                    Photoshop for image editing and Adobe Illustrator for vector
-                    graphics.
+                    Proficient in backup and security practices, including data
+                    backup, recovery, and encryption. Skilled in implementing
+                    security measures to protect data and systems. Experienced
+                    with tools for creating secure backups, managing firewalls,
+                    and ensuring data integrity across multiple platforms.
                   </p>
                 </div>
               </div>
@@ -160,9 +174,11 @@ export default function About() {
                 <div className="flex flex-col">
                   <h1 className="text-xl mb-2 font-bold">IT Consultancy</h1>
                   <p className="text-sm ">
-                    I specialize in enhancing business efficiency through
-                    strategic IT solutions. Let&apos;s navigate the tech
-                    landscape together for your success.
+                    Specializing in IT consultancy, I enhance business
+                    efficiency through strategic IT solutions. Lets work
+                    together to navigate the tech landscape, implement tailored
+                    strategies, optimize workflows, improve productivity, and
+                    drive your business success.
                   </p>
                 </div>
               </div>

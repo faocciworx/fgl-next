@@ -74,7 +74,7 @@ export default function Home() {
                 className=""
               />
             </div>
-            <p className="font-general text-lg md:text-2xl lg:text-base text-white w-full lg:w-11/12 leading-7 md:leading-10 lg:leading-8 text-justify">
+            <p className="font-general text-base lg:text-lg mt-4 text-white w-full lg:w-11/12 leading-7 md:leading-10 lg:leading-8 text-justify">
               Hello, I&apos;m Faocci Ghaize O. Layug, a tech and design
               enthusiast ready to bring my expertise to your projects. With a
               knack for creative problem-solving in web and graphic design, and
