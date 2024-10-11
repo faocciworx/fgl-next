@@ -6,6 +6,7 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaGithub,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 const ContactForm = () => {
@@ -133,8 +134,15 @@ const ContactForm = () => {
           <ul className="mt-3">
             <li className="flex items-center">
               <div className="flex items-center justify-center ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
-                <FaEnvelope />
+                <a
+                  href="mailto:faocciworx@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaEnvelope />
+                </a>
               </div>
+
               <a
                 href="mailto:faocciworx@gmail.com"
                 className="text-white text-sm ml-3"
@@ -142,6 +150,27 @@ const ContactForm = () => {
                 <small className="block text-primary">Mail</small>
                 <strong className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
                   faocciworx@gmail.com
+                </strong>
+              </a>
+            </li>
+            <li className="flex items-center mt-3">
+              <div className="flex items-center justify-center ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
+                <a
+                  href="https://wa.me/16717878564"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaWhatsapp size={25} />
+                </a>
+              </div>
+
+              <a
+                href="https://wa.me/16717878564"
+                className="text-white text-sm ml-3"
+              >
+                <small className="block text-primary">WhatsApp</small>
+                <strong className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
+                  +(671) 787- 8564
                 </strong>
               </a>
             </li>

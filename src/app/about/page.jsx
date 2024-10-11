@@ -52,15 +52,27 @@ export default function About() {
             </p>
             <p className="text-sm lg:text-lg font-general mt-4 text-white">
               <span className="text-primary">Residence:&nbsp;</span>
-              Mabalacat City, Pampanga, Philippines
+              Yona, Guam, USA
             </p>
             <p className="text-sm lg:text-lg font-general mt-2 text-white">
-              <span className="text-primary">Email:&nbsp;</span>
-              faocciworx@gmail.com
+              <a
+                href="mailto:faocciworx@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="text-primary">Email:&nbsp;</span>
+                faocciworx@gmail.com
+              </a>
             </p>
             <p className="text-sm lg:text-lg font-general mt-2 text-white">
-              <span className="text-primary">Phone:&nbsp;</span>
-              +(63) 909-122-6365
+              <a
+                href="https://wa.me/16717878564"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="text-primary">Phone:&nbsp;</span>
+                +(671) 787- 8564
+              </a>
             </p>
           </div>
         </div>
