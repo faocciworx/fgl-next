@@ -40,7 +40,7 @@ const Sidebar = ({ isOpen, closeMenu, navItems }) => {
                 <div
                   className={`flex items-center space-x-2 py-2 px-3 rounded cursor-pointer ${
                     item.href === pathname
-                      ? "dark:text-gray-800 text-white bg-primary"
+                      ? "text-white bg-primary"
                       : "dark:text-gray-800 text-white hover:bg-gray-100 dark:hover:bg-primary"
                   }`}
                 >

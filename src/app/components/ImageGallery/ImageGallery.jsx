@@ -161,7 +161,7 @@ const ImageGallery = () => {
             type="button"
             className={`text-sm font-medium px-4 py-2 sm:px-3 sm:py-1.5 me-3 mb-3 rounded-md ${
               activeCategory === category
-                ? "dark:text-gray-800 text-white bg-primary"
+                ? "text-white bg-primary"
                 : "dark:text-gray-800 text-white hover:text-white border border-primary hover:bg-primary"
             }`}
             onClick={() => setActiveCategory(category)}
