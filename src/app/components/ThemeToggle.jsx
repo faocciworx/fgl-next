@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { MdLightMode, MdDarkMode } from "react-icons/md"; // Importing icons from react-icons
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState("light"); // Default to dark theme
+  const [theme, setTheme] = useState("dark"); // Default to dark theme
 
   useEffect(() => {
     // Check local storage and preferred color scheme on the client side

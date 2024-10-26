@@ -92,7 +92,7 @@ const Navbarpage = () => {
       <nav
         className={`fixed top-0 left-0 right-0 w-full z-50 transition-transform duration-300 ease-in-out ${
           isVisible ? "translate-y-0" : "-translate-y-full"
-        } dark:bg-[#f2ede6] bg-[#202020] shadow-lg py-2 lg:px-36 lg:py-10`}
+        } dark:bg-[#f2ede6] bg-[#202020] shadow-lg py-2 lg:px-44 lg:py-6`}
       >
         <div className="w-full items-center h-full">
           <div className="flex items-center space-x-3">
