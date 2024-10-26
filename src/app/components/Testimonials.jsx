@@ -86,12 +86,12 @@ const Testimonial = () => {
   const renderTestimonial = (testimonial) => (
     <div
       key={testimonial.id}
-      className={`px-4 ${isSmallScreen ? "w-auto" : "w-full"}`}
+      className={`px-4 ${isSmallScreen ? "w-auto" : "w-full"} `}
       style={{ width: calculateItemWidth() }}
     >
-      <div className="group p-1 md:p-4 lg:p-6 transition-all duration-700 font-general text-white">
+      <div className="group p-1 md:p-4 lg:p-6 font-general dark:text-gray-800 text-white dark:hover:text-primary hover:text-primary">
         <div>
-          <blockquote className="text-base leading-6 transition-all italic font-semibold">
+          <blockquote className="text-base leading-6 italic font-semibold">
             <svg
               className="w-8 h-8 text-primary rotate-180 mb-4"
               aria-hidden="true"
@@ -113,9 +113,7 @@ const Testimonial = () => {
             alt="avatar"
           />
           <div className="flex flex-col items-center gap-2 mt-4">
-            <h5 className="text-sm transition-all duration-500 mb-1 text-center">
-              {testimonial.name}
-            </h5>
+            <h5 className="text-sm  mb-1 text-center">{testimonial.name}</h5>
             <span className="text-sm leading-4 text-center">
               {testimonial.position}
             </span>

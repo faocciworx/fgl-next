@@ -49,10 +49,10 @@ const JParticles = () => {
       },
       particles: {
         color: {
-          value: "#ffffff",
+          value: "#ff013d",
         },
         links: {
-          color: "#ffffff",
+          color: "#c27788",
           distance: 150,
           enable: true,
           opacity: 0.5,

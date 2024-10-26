@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import {
   FaBars,
@@ -15,7 +15,6 @@ import {
 import Sidebar from "./Sidebar";
 import ThemeToggle from "../ThemeToggle";
 
-// Define navItems at the top level
 const navItems = [
   { href: "/", label: "Home", icon: <FaHome className="lg:hidden" /> },
   { href: "/about", label: "About Me", icon: <FaUser className="lg:hidden" /> },
@@ -41,8 +40,9 @@ const navItems = [
   },
 ];
 
-const Navbar = () => {
+const Navbarpage = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false); // Start hidden
   const pathname = usePathname();
 
   const toggleMenu = () => {
@@ -53,12 +53,49 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    let interactionTimeout;
+
+    const handleScroll = () => {
+      const currentScrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      // Show navbar only if not at the very top
+      setIsVisible(currentScrollTop !== 0);
+    };
+
+    const showNavbarOnInteraction = () => {
+      clearTimeout(interactionTimeout);
+      setIsVisible(true);
+
+      // Hide again after 5 seconds of inactivity
+      interactionTimeout = setTimeout(() => {
+        setIsVisible(false);
+      }, 5000);
+    };
+
+    // Event listeners for scroll and user interactions
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("mousedown", showNavbarOnInteraction);
+    window.addEventListener("touchstart", showNavbarOnInteraction);
+
+    // Cleanup event listeners on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousedown", showNavbarOnInteraction);
+      window.removeEventListener("touchstart", showNavbarOnInteraction);
+      clearTimeout(interactionTimeout);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="w-full landscape:lg:pt-32 landscape:xl:pt-0 landscape:2xl:pt-0 portrait:lg:pb-40">
-        <div className="w-full items-center py-2 lg:py-10 h-5 lg:pb-20">
+      <nav
+        className={`fixed top-0 left-0 right-0 w-full z-50 transition-transform duration-300 ease-in-out ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        } dark:bg-[#f2ede6] bg-[#202020] shadow-lg py-2 lg:px-36 lg:py-10`}
+      >
+        <div className="w-full items-center h-full">
           <div className="flex items-center space-x-3">
-            {/* Mobile menu toggle button */}
             <button
               type="button"
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm dark:text-gray-800 text-white rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
@@ -72,21 +109,16 @@ const Navbar = () => {
                 <FaBars className="w-5 h-5" />
               )}
             </button>
-
-            {/* Brand */}
             <Link href="#">
               <div className="flex items-center space-x-3 cursor-pointer w-full">
-                <span className="self-center text-primary text-2xl font-semibold whitespace-nowrap">
-                  <button href="#">FGOL</button>
+                <span className="self-center hover:text-primary text-2xl font-semibold whitespace-nowrap">
+                  <button href="/">FGOL</button>
                 </span>
               </div>
             </Link>
-
             <div className="flex lg:hidden xl:hidden 2xl:hidden w-full items-end justify-end">
               <ThemeToggle />
             </div>
-
-            {/* Navbar links */}
             <div className="hidden lg:flex justify-center w-full">
               <ul className="flex flex-col lg:flex-row">
                 {navItems.map((item) => (
@@ -107,19 +139,15 @@ const Navbar = () => {
                 ))}
               </ul>
             </div>
-
-            {/* Dark Mode & Light Mode Button */}
             <div className="hidden lg:flex items-center space-x-5 cursor-pointer">
               <ThemeToggle />
             </div>
           </div>
         </div>
       </nav>
-
-      {/* Sidebar component */}
       <Sidebar isOpen={isOpen} closeMenu={closeMenu} navItems={navItems} />
     </>
   );
 };
 
-export default Navbar;
+export default Navbarpage;

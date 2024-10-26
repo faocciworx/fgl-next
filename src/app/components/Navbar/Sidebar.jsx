@@ -13,21 +13,21 @@ const Sidebar = ({ isOpen, closeMenu, navItems }) => {
       onClick={closeMenu}
     >
       <div
-        className="w-64 bg-[#202020] p-4 h-full"
+        className="w-64 dark:bg-[#f2ede6] bg-[#202020] p-4 h-full"
         onClick={(e) => e.stopPropagation()}
         style={{ right: 0 }}
       >
         <div className="flex justify-between items-center">
           <Link href="/" passHref>
             <div className="flex items-center space-x-3 cursor-pointer">
-              <span className="self-center hover:text-primary text-2xl font-semibold whitespace-nowrap dark:text-white">
+              <span className="self-center hover:text-primary text-2xl font-semibold whitespace-nowrap text-primary">
                 <button href="/">FGOL</button>
               </span>
             </div>
           </Link>
           <button
             type="button"
-            className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 focus:outline-none"
+            className="dark:text-gray-800 text-white hover:text-gray-700 dark:hover:text-primary focus:outline-none"
             onClick={closeMenu}
           >
             <FaTimes className="w-5 h-5" />
@@ -40,8 +40,8 @@ const Sidebar = ({ isOpen, closeMenu, navItems }) => {
                 <div
                   className={`flex items-center space-x-2 py-2 px-3 rounded cursor-pointer ${
                     item.href === pathname
-                      ? "text-white bg-primary"
-                      : "text-white hover:bg-gray-100 dark:hover:bg-primary dark:text-white"
+                      ? "dark:text-gray-800 text-white bg-primary"
+                      : "dark:text-gray-800 text-white hover:bg-gray-100 dark:hover:bg-primary"
                   }`}
                 >
                   {item.icon}

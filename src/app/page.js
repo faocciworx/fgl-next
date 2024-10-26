@@ -8,6 +8,7 @@ import JLoading from "./components/JLoading/JLoading";
 import WipeInLeftAnimation from "./components/Animations/WipeInLeftAnimation";
 import JParticles from "./components/JParticles";
 import HomeSkeleton from "./components/Skeleton/HomeSkeleton";
+import Link from "next/link";
 
 export default function Home() {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -15,15 +16,21 @@ export default function Home() {
   const socialMediaLinks = [
     {
       href: "https://www.facebook.com/faocci/",
-      icon: <FaFacebookF className="social-media-icon" />,
+      icon: (
+        <FaFacebookF className="social-media-icon h-5 w-5 text-white dark:hover:text-gray-800 hover:text-white" />
+      ),
     },
     {
       href: "https://www.linkedin.com/in/faocci/",
-      icon: <FaLinkedinIn className="social-media-icon" />,
+      icon: (
+        <FaLinkedinIn className="social-media-icon h-5 w-5 text-white dark:hover:text-gray-800 hover:text-white" />
+      ),
     },
     {
       href: "https://github.com/faocciworx",
-      icon: <FaGithub className="social-media-icon" />,
+      icon: (
+        <FaGithub className="social-media-icon h-7 w-6 text-white dark:hover:text-gray-800 hover:text-white" />
+      ),
     },
   ];
 
@@ -65,16 +72,16 @@ export default function Home() {
               I&apos;m&nbsp;
               <TypingAnimation
                 texts={[
-                  "Web Developer ‎ ‎ ",
-                  "Graphic Artist ‎  ‎ ",
-                  "Computer Technician ‎ ‎ ",
+                  "Web Developer ‎",
+                  "Graphic Artist ‎",
+                  "Computer Technician ‎",
                 ]}
                 baseSpeed={100}
                 speedVariance={30}
                 className=""
               />
             </div>
-            <p className="font-general text-base lg:text-lg mt-4 text-white w-full lg:w-11/12 leading-7 md:leading-10 lg:leading-8 text-justify">
+            <p className="font-general text-base lg:text-lg mt-4 dark:text-gray-800 text-white w-full lg:w-11/12 leading-7 md:leading-10 lg:leading-8 text-justify">
               Hello, I&apos;m Faocci Ghaize O. Layug, a tech and design
               enthusiast ready to bring my expertise to your projects. With a
               knack for creative problem-solving in web and graphic design, and
@@ -94,7 +101,7 @@ export default function Home() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-full h-full text-white hover:text-primary transform transition-transform duration-300 hover:scale-110"
+                    className="flex items-center justify-center w-full h-full dark:text-gray-800 text-white hover:text-primary transform transition-transform duration-300 hover:scale-110"
                   >
                     {link.icon}
                   </a>
@@ -110,19 +117,19 @@ export default function Home() {
               >
                 <button
                   type="button"
-                  className="w-full text-white border border-primary bg-primary hover:bg-transparent 2xl:hover:animate-bounce hover:border-primary font-medium rounded-lg py-2.5 text-center px-5 md:py-4 lg:py-2.5 mb-2 md:mb-0 text-sm md:text-lg lg:text-sm"
+                  className="w-full text-white dark:hover:text-gray-800 border border-primary bg-primary hover:bg-transparent 2xl:hover:animate-bounce hover:border-primary font-medium rounded-lg py-2.5 text-center px-5 md:py-4 lg:py-2.5 mb-2 md:mb-0 text-sm md:text-lg lg:text-sm"
                 >
                   Download CV
                 </button>
               </a>
-              <a href="/contact" className="w-full md:w-auto">
+              <Link href="/contact" className="w-full md:w-auto">
                 <button
                   type="button"
-                  className="w-full text-white hover:text-white border border-primary 2xl:hover:animate-bounce hover:bg-primary font-medium rounded-lg py-2.5 text-center px-5 md:py-4 lg:py-2.5 mb-2 md:mb-0 text-sm md:text-lg lg:text-sm"
+                  className="w-full dark:text-gray-800 text-white dark:hover:text-white border border-primary 2xl:hover:animate-bounce hover:bg-primary font-medium rounded-lg py-2.5 text-center px-5 md:py-4 lg:py-2.5 mb-2 md:mb-0 text-sm md:text-lg lg:text-sm"
                 >
                   Hire Me!
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

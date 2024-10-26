@@ -48,7 +48,7 @@ const ClickableImageModal = ({
   }, [isOpen]);
 
   return (
-    <div className={`flex justify-start items-center ${containerClassName}`}>
+    <div className={`flex justify-start items-center  ${containerClassName}`}>
       <div
         className={`cursor-pointer transition-transform transform-gpu hover:scale-110 ${imageClassName}`}
         onClick={handleClick}
@@ -65,7 +65,7 @@ const ClickableImageModal = ({
       >
         <div
           ref={modalContentRef}
-          className={`modal-content relative transform shadow-lg p-4`}
+          className={`modal-content relative transform p-4`}
           style={{
             transitionProperty: "transform",
             transitionDuration: "0.5s",

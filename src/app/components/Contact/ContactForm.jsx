@@ -125,7 +125,7 @@ const ContactForm = () => {
     <div className="grid sm:grid-cols-2 items-start gap-8 mx-auto max-w-7xl font-general">
       <div>
         <h1 className="text-xl font-general font-bold">Let&apos;s Talk</h1>
-        <p className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
+        <p className="text-sm lg:text-lg font-general mt-4 dark:text-gray-800 text-white w-auto text-justify">
           Have some big idea or brand to develop and need help? Then reach out,
           we&apos;d love to hear about your project and provide help.
         </p>
@@ -133,7 +133,7 @@ const ContactForm = () => {
           <h2 className="text-xl font-general font-bold">Email</h2>
           <ul className="mt-3">
             <li className="flex items-center">
-              <div className="flex items-center justify-center ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
+              <div className="flex items-center justify-center text-white dark:hover:text-gray-800 hover:text-white ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
                 <a
                   href="mailto:faocciworx@gmail.com"
                   target="_blank"
@@ -145,16 +145,16 @@ const ContactForm = () => {
 
               <a
                 href="mailto:faocciworx@gmail.com"
-                className="text-white text-sm ml-3"
+                className="dark:text-gray-800 text-white text-sm ml-3"
               >
                 <small className="block text-primary">Mail</small>
-                <strong className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
+                <strong className="text-sm lg:text-lg font-general mt-4 dark:text-gray-800 text-white w-auto text-justify">
                   faocciworx@gmail.com
                 </strong>
               </a>
             </li>
             <li className="flex items-center mt-3">
-              <div className="flex items-center justify-center ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
+              <div className="flex items-center justify-center text-white dark:hover:text-gray-800 hover:text-white ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
                 <a
                   href="https://wa.me/16717878564"
                   target="_blank"
@@ -166,10 +166,10 @@ const ContactForm = () => {
 
               <a
                 href="https://wa.me/16717878564"
-                className="text-white text-sm ml-3"
+                className="dark:text-gray-800 text-white text-sm ml-3"
               >
                 <small className="block text-primary">WhatsApp</small>
-                <strong className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
+                <strong className="text-sm lg:text-lg font-general mt-4 dark:text-gray-800 text-white w-auto text-justify">
                   +(671) 787- 8564
                 </strong>
               </a>
@@ -179,31 +179,31 @@ const ContactForm = () => {
         <div className="mt-7 md:mt-12 xl:mt-12 2xl:mt-12">
           <h2 className="text-xl font-general font-bold">Socials</h2>
           <ul className="flex mt-3 space-x-4">
-            <li className="flex items-center justify-center ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
+            <li className="flex items-center justify-center text-white dark:hover:text-gray-800 hover:text-white ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
               <a
                 href="https://www.facebook.com/faocci/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaFacebookF />
+                <FaFacebookF size={20} />
               </a>
             </li>
-            <li className="flex items-center justify-center ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
+            <li className="flex items-center justify-center text-white dark:hover:text-gray-800 hover:text-white ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
               <a
                 href="https://www.linkedin.com/in/faocci/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedinIn />
+                <FaLinkedinIn size={20} />
               </a>
             </li>
-            <li className="flex items-center justify-center ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
+            <li className="flex items-center justify-center text-white dark:hover:text-gray-800 hover:text-white ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
               <a
                 href="https://github.com/faocciworx"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub />
+                <FaGithub size={22} />
               </a>
             </li>
           </ul>
@@ -212,11 +212,11 @@ const ContactForm = () => {
 
       <form onSubmit={handleSubmit} className="w-full ml-auto space-y-4 mb-14">
         <h1 className="text-xl font-general font-bold">Get in Touch</h1>
-        <p className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
+        <p className="text-sm lg:text-lg font-general mt-4 dark:text-gray-800 text-white w-auto text-justify">
           Got a big idea? Let&apos;s bring it to life. Contact me today!
         </p>
 
-        <div className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
+        <div className="text-sm lg:text-lg font-general mt-4 dark:text-gray-800 text-white w-auto text-justify">
           <input
             id="nameInput"
             type="text"
@@ -224,49 +224,49 @@ const ContactForm = () => {
             placeholder="Your Name"
             value={formData.name}
             onChange={handleChange}
-            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 leading-8 text-gray-100 placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
+            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 leading-8 dark:text-gray-800 text-white placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
           />
           {errors.name && (
             <p className="text-red-500 text-xs mt-1">{errors.name}</p>
           )}
         </div>
 
-        <div className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
+        <div className="text-sm lg:text-lg font-general mt-4 dark:text-gray-800 text-white w-auto text-justify">
           <input
             type="email"
             name="email"
             placeholder="Your Email"
             value={formData.email}
             onChange={handleChange}
-            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 leading-8 text-gray-100 placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
+            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 leading-8 dark:text-gray-800 text-white placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
           />
           {errors.email && (
             <p className="text-red-500 text-xs mt-1">{errors.email}</p>
           )}
         </div>
 
-        <div className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
+        <div className="text-sm lg:text-lg font-general mt-4 dark:text-gray-800 text-white w-auto text-justify">
           <input
             type="text"
             name="subject"
             placeholder="Your Subject"
             value={formData.subject}
             onChange={handleChange}
-            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 leading-8 text-gray-100 placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
+            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 leading-8 dark:text-gray-800 text-white placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
           />
           {errors.subject && (
             <p className="text-red-500 text-xs mt-1">{errors.subject}</p>
           )}
         </div>
 
-        <div className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify">
+        <div className="text-sm lg:text-lg font-general mt-4 dark:text-gray-800 text-white w-auto text-justify">
           <textarea
             name="message"
             placeholder="Your Message"
             rows="6"
             value={formData.message}
             onChange={handleChange}
-            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 leading-8 text-gray-100 placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
+            className={`peer w-full rounded border border-[#495057] bg-transparent py-1 px-3 leading-8 dark:text-gray-800 text-white placeholder-gray-400 outline-none transition-colors duration-200 ease-in-out focus:border-primary focus:ring-0 focus:ring-primary`}
           ></textarea>
           {errors.message && (
             <p className="text-red-500 text-xs mt-1">{errors.message}</p>
@@ -281,7 +281,9 @@ const ContactForm = () => {
         </button>
 
         {formStatus && (
-          <p className="mt-4 text-sm text-center text-white">{formStatus}</p>
+          <p className="mt-4 text-sm text-center dark:text-gray-800 text-white">
+            {formStatus}
+          </p>
         )}
       </form>
     </div>

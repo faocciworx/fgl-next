@@ -73,7 +73,7 @@ const Modal = ({ images, onClose, currentIndex, setSelectedImageIndex }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          className="absolute right-3 md:right-7 lg:right-7 top-0 md:top-3 lg:top-2 text-white text-sm lg:text-lg hover:text-primary"
+          className="absolute right-4 md:right-7 lg:right-7 top-0 md:top-3 lg:top-2 text-white text-sm lg:text-lg hover:text-primary"
           onClick={onClose}
         >
           <FaTimes />
@@ -161,8 +161,8 @@ const ImageGallery = () => {
             type="button"
             className={`text-sm font-medium px-4 py-2 sm:px-3 sm:py-1.5 me-3 mb-3 rounded-md ${
               activeCategory === category
-                ? "text-white bg-primary"
-                : "text-white hover:text-white border border-primary hover:bg-primary"
+                ? "dark:text-gray-800 text-white bg-primary"
+                : "dark:text-gray-800 text-white hover:text-white border border-primary hover:bg-primary"
             }`}
             onClick={() => setActiveCategory(category)}
           >
@@ -178,11 +178,11 @@ const ImageGallery = () => {
             onClick={() => handleImageClick(index)}
           >
             <img
-              className="h-auto max-w-full rounded-lg transform transition-transform duration-300 ease-in-out group-hover:scale-110 "
+              className="h-auto max-w-full rounded-lg transform transition-transform duration-300 ease-in-out group-hover:scale-110 border-b-2 md:border-b-4 border-primary"
               src={image.src}
               alt=""
             />
-            <div className="absolute top-0 left-0 hidden group-hover:flex items-center justify-center w-full h-full bg-black bg-opacity-50 rounded-lg">
+            <div className="absolute top-0 left-0 hidden group-hover:flex items-center justify-center w-full h-full bg-black bg-opacity-50 rounded-lg border-b-2 md:border-b-4 hover:border-white">
               <div className="relative group space-x-2 flex flex-col items-center justify-center">
                 <div className="text-white flex items-center justify-between text-sm p-2 text-center font-general">
                   {image.title}

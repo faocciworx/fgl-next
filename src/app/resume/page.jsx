@@ -1,13 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
 import WipeInRightAnimation from "../components/Animations/WipeInRightAnimation";
-import CloseBtn from "../components/CloseBtn";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { FiPenTool } from "react-icons/fi";
 import { FaComputer } from "react-icons/fa6";
 import { SiGoogledocs } from "react-icons/si";
 import { LuDatabaseBackup } from "react-icons/lu";
 import { MdOutlineSecurity } from "react-icons/md";
+import Navbarpage from "../components/Navbar/Navbarpage";
 export default function Resume() {
   const [experience2016, setExperience2016] = useState(0);
   const [experience2014, setExperience2014] = useState(0);
@@ -21,6 +21,7 @@ export default function Resume() {
   return (
     <div className="relative flex flex-col font-general px-7">
       <WipeInRightAnimation duration="2.5s">
+        <Navbarpage />
         <div className="flex flex-col justify-center items-center my-10 lg:my-20 gap-y-5">
           <h4 className="text-xl text-primary">I&apos;m available for hire</h4>
           <h2 className="text-5xl font-semibold">My Resume</h2>
@@ -29,7 +30,7 @@ export default function Resume() {
           {/* Education Section Start */}
           <div className="flex flex-col md:flex-row lg:flex-row md:gap-x-16 2xl:gap-x-64 font-general">
             <div className="flex flex-col w-full lg:w-fit lg:p-4">
-              <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] border-[#FFFFFF33] rounded px-4 py-2 mb-6 w-fit">
+              <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] dark:text-gray-800 text-white dark:hover:text-primary hover:text-primary hover:border-primary dark:hover:border-primary dark:border-gray-800 border-[#FFFFFF33] rounded px-4 py-2 mb-6 w-fit">
                 Education
               </h1>
               <div className="w-full max-w-3xl mx-auto">
@@ -40,7 +41,7 @@ export default function Resume() {
                         2024
                       </div>
                     </div>
-                    <div className="text-white pl-9">
+                    <div className="dark:text-gray-800 text-white pl-9">
                       <div className="mb-2">
                         <span className="text-xl font-bold">College </span>
                         <span className="block lg:hidden"></span>{" "}
@@ -63,7 +64,7 @@ export default function Resume() {
                         2020
                       </div>
                     </div>
-                    <div className="text-white pl-9">
+                    <div className="dark:text-gray-800 text-white pl-9">
                       <div className="mb-2">
                         <span className="text-xl font-bold">Senior High </span>
                       </div>
@@ -85,7 +86,7 @@ export default function Resume() {
                         2018
                       </div>
                     </div>
-                    <div className="text-white pl-9">
+                    <div className="dark:text-gray-800 text-white pl-9">
                       <div className="mb-2">
                         <span className="text-xl font-bold">Junior High </span>
                       </div>
@@ -104,7 +105,7 @@ export default function Resume() {
                         2017
                       </div>
                     </div>
-                    <div className="text-white pl-9">
+                    <div className="dark:text-gray-800 text-white pl-9">
                       <div className="mb-2">
                         <span className="text-xl font-bold">Elementary </span>
                       </div>
@@ -121,7 +122,7 @@ export default function Resume() {
             </div>
 
             <div className="flex flex-col w-full lg:w-fit lg:p-4">
-              <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] border-[#FFFFFF33] rounded px-4 py-2 mb-6 mt-11 md:mt-0 lg:mt-0 w-fit">
+              <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] dark:text-gray-800 text-white dark:hover:text-primary hover:text-primary hover:border-primary dark:hover:border-primary dark:border-gray-800 border-[#FFFFFF33] rounded px-4 py-2 mb-6 mt-11 md:mt-0 lg:mt-0 w-fit">
                 Working Experience
               </h1>
               <div className="w-full max-w-3xl mx-auto">
@@ -132,7 +133,7 @@ export default function Resume() {
                         2016 - Present ({experience2016} years)
                       </div>
                     </div>
-                    <div className="text-white pl-9">
+                    <div className="dark:text-gray-800 text-white pl-9">
                       <div className="mb-2">
                         <span className="text-xl font-bold">
                           Graphic Designer{" "}
@@ -152,7 +153,7 @@ export default function Resume() {
                         2014 - Present ({experience2014} years)
                       </div>
                     </div>
-                    <div className="text-white pl-9">
+                    <div className="dark:text-gray-800 text-white pl-9">
                       <div className="mb-2">
                         <span className="text-xl font-bold">
                           Computer Technician{" "}
@@ -172,7 +173,7 @@ export default function Resume() {
                         2024
                       </div>
                     </div>
-                    <div className="text-white pl-9">
+                    <div className="dark:text-gray-800 text-white pl-9">
                       <div className="mb-2">
                         <span className="text-xl font-bold">
                           Developer Internship{" "}
@@ -194,7 +195,7 @@ export default function Resume() {
                         2023 - 2024
                       </div>
                     </div>
-                    <div className="text-white pl-9">
+                    <div className="dark:text-gray-800 text-white pl-9">
                       <div className="mb-2">
                         <span className="text-xl font-bold">
                           Project Manager
@@ -217,12 +218,12 @@ export default function Resume() {
 
           {/* Applications Used Start */}
           <div className="relative">
-            <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] border-[#FFFFFF33] rounded inline-block text-center p-3 mt-5 md:mt-5 lg:mt-0">
+            <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] dark:text-gray-800 text-white dark:hover:text-primary hover:text-primary hover:border-primary dark:hover:border-primary dark:border-gray-800 border-[#FFFFFF33] rounded inline-block text-center p-3 mt-5 md:mt-5 lg:mt-0">
               Applications Used
             </h1>
             <div className="flex flex-col md:flex-row lg:flex-row pt-8 lg:pt-10 lg:p-4 gap-x-2 items-start">
               <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
-                <div className="service-container flex items-center">
+                <div className="service-container flex items-center hover:text-primary">
                   <div className="mr-4 flex items-center justify-center self-start">
                     <AiOutlineHtml5 className="h-12 w-12 text-primary" />
                   </div>
@@ -232,32 +233,53 @@ export default function Resume() {
                     </h1>
                     <div className="text-sm space-y-4">
                       <p className="text-primary">
-                        ➤ <span className="text-white">HTML</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          HTML
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">CSS</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          CSS
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">React JS</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          React JS
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Vue JS</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Vue JS
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">TypeScript</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          TypeScript
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Tailwind</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Tailwind
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Boot Strap</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Boot Strap
+                        </span>
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
-                <div className="service-container flex items-center">
+                <div className="service-container flex items-center hover:text-primary">
                   <div className="mr-4 flex items-center justify-center self-start font-general">
                     <FiPenTool className="h-12 w-12 text-primary" />
                   </div>
@@ -267,32 +289,53 @@ export default function Resume() {
                     </h1>
                     <div className="text-sm space-y-4">
                       <p className="text-primary">
-                        ➤ <span className="text-white">Adoble Photoshop</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Adoble Photoshop
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Adobe Illustrator</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Adobe Illustrator
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Adobe Premier</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Adobe Premier
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Adobe Indesign</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Adobe Indesign
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Adobe Lightroom</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Adobe Lightroom
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Figma UI</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Figma UI
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Canva</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Canva
+                        </span>
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
-                <div className="service-container flex items-center">
+                <div className="service-container flex items-center hover:text-primary">
                   <div className="mr-4 flex items-center justify-center self-start">
                     <FaComputer className="h-12 w-12 text-primary" />
                   </div>
@@ -303,27 +346,39 @@ export default function Resume() {
                     <div className="text-sm space-y-4">
                       <p className="text-primary">
                         ➤{" "}
-                        <span className="text-white">
+                        <span className="dark:text-gray-800 text-white">
                           OS Installation (Window, MAC, Linux)
                         </span>
                       </p>
                       <p className="text-primary">
                         ➤{" "}
-                        <span className="text-white">
+                        <span className="dark:text-gray-800 text-white">
                           Software Installation
                         </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Burning Test</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Burning Test
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Memtest</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Memtest
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Hirens</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Hirens
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Disk Sentinel</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Disk Sentinel
+                        </span>
                       </p>
                     </div>
                   </div>
@@ -332,7 +387,7 @@ export default function Resume() {
             </div>
             <div className="flex flex-col md:flex-row lg:flex-row md:mt-10 lg:mt-0 lg:p-4 gap-x-2 items-start">
               <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
-                <div className="service-container flex items-center">
+                <div className="service-container flex items-center hover:text-primary">
                   <div className="mr-4 flex items-center justify-center self-start">
                     <SiGoogledocs className="h-10 w-12 text-primary" />
                   </div>
@@ -343,29 +398,40 @@ export default function Resume() {
                     <div className="text-sm space-y-4">
                       <p className="text-primary">
                         ➤{" "}
-                        <span className="text-white">
+                        <span className="dark:text-gray-800 text-white">
                           Microsoft Office Suite
                         </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Wps Office Suite</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Wps Office Suite
+                        </span>
                       </p>
                       <p className="text-primary">
                         ➤{" "}
-                        <span className="text-white">Google Office Suite</span>
+                        <span className="dark:text-gray-800 text-white">
+                          Google Office Suite
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Cloud Storage</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Cloud Storage
+                        </span>
                       </p>
                       <p className="text-primary">
-                        ➤ <span className="text-white">Email Clients</span>
+                        ➤{" "}
+                        <span className="dark:text-gray-800 text-white">
+                          Email Clients
+                        </span>
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
-                <div className="service-container flex items-center">
+                <div className="service-container flex items-center hover:text-primary">
                   <div className="mr-4 flex items-center justify-center self-start font-general">
                     <MdOutlineSecurity className="h-12 w-12 text-primary" />
                   </div>
@@ -376,7 +442,7 @@ export default function Resume() {
                     <div className="text-sm leading-8">
                       <p className="text-primary">
                         ➤{" "}
-                        <span className="text-white">
+                        <span className="dark:text-gray-800 text-white">
                           Introducing our sleek Backup and Security <br /> app -
                           ensuring the utmost data protection by <br />
                           seamlessly safeguarding your digital assets <br />{" "}
@@ -388,7 +454,7 @@ export default function Resume() {
                 </div>
               </div>
               <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
-                <div className="service-container flex items-center">
+                <div className="service-container flex items-center hover:text-primary">
                   <div className="mr-4 flex items-center justify-center self-start">
                     <LuDatabaseBackup className="h-12 w-12 text-primary" />
                   </div>
@@ -399,7 +465,7 @@ export default function Resume() {
                     <div className="text-sm leading-8">
                       <p className="text-primary">
                         ➤{" "}
-                        <span className="text-white ">
+                        <span className="dark:text-gray-800 text-white ">
                           I specialize in enhancing business efficiency through
                           strategic IT solutions. Let&apos;s navigate the tech
                           landscape together for your success.
@@ -413,9 +479,7 @@ export default function Resume() {
           </div>
           {/* Applications Used End */}
         </div>
-        <div className="flex justify-end fixed top-4 right-4">
-          <CloseBtn />
-        </div>
+        <div className="flex justify-end fixed top-4 right-4"></div>
       </WipeInRightAnimation>
     </div>
   );

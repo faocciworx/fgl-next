@@ -120,7 +120,7 @@ const CertificationsGallery = () => {
           CertificationsData[category].map((certification, index) => (
             <div key={index} className="relative">
               <div
-                className="group cursor-pointer overflow-hidden relative rounded-lg"
+                className="group cursor-pointer overflow-hidden relative rounded-lg border-b-2 md:border-b-4 border-primary hover:border-white"
                 onClick={(event) =>
                   handleCertificationClick(
                     CertificationsData[category],
@@ -136,10 +136,11 @@ const CertificationsGallery = () => {
                       src={certification.src}
                       alt=""
                     />
-                    <div className=" gap-y-1 overflow-hidden leading-6 absolute bottom-4 left-3 sm:left-4 md:left-5 lg:left-5 xl:left-5 bg-primary text-white font-medium rounded-md text-sm py-1 px-5 text-center">
+                    <div className=" gap-y-1 overflow-hidden leading-6 absolute bottom-4 left-3 sm:left-4 md:left-5 lg:left-5 xl:left-5 bg-primary text-white  font-medium rounded-md text-sm py-1 px-5 text-center">
                       {certification.date}
                     </div>
                   </div>
+
                   <div className="absolute inset-0 bg-black rounded-lg bg-opacity-0 transition-opacity duration-300 group-hover:bg-opacity-50 flex items-center justify-center space-x-2 opacity-0 group-hover:opacity-100">
                     <button
                       className="p-3 text-white hover:text-white border border-primary hover:bg-primary font-medium rounded-full text-xs sm:text-2xl"
@@ -158,11 +159,12 @@ const CertificationsGallery = () => {
                   </div>
                 </div>
               </div>
+
               <div className="mt-2 space-y-2">
-                <h2 className="text-lg md:text-lg lg:text-xl text-start text-white pointer-events-none font-general font-bold">
+                <h2 className="text-lg md:text-lg lg:text-xl text-start dark:text-gray-800 text-white pointer-events-none font-general font-bold ">
                   {certification.title}
                 </h2>
-                <p className="text-sm text-white pointer-events-none leading-7 lg:leading-8 font-general text-justify lg:text-start">
+                <p className="text-sm dark:text-gray-800 text-white pointer-events-none leading-7 lg:leading-8 font-general text-justify lg:text-start">
                   {certification.description}
                 </p>
               </div>

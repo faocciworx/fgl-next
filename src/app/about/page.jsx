@@ -8,13 +8,14 @@ import { SiGoogledocs } from "react-icons/si";
 import { LuDatabaseBackup } from "react-icons/lu";
 import { MdOutlineSecurity } from "react-icons/md";
 import Testimonials from "../components/Testimonials";
-import CloseBtn from "../components/CloseBtn";
 import WipeInRightAnimation from "../components/Animations/WipeInRightAnimation";
+import Navbarpage from "../components/Navbar/Navbarpage";
 
 export default function About() {
   return (
     <div className="relative flex flex-col font-general px-7">
       <WipeInRightAnimation duration="2.5s">
+        <Navbarpage />
         <div className="flex flex-col justify-center items-center my-10 lg:my-20 gap-y-5">
           <h4 className="text-xl text-primary">Who I Am</h4>
           <h2 className="text-5xl font-semibold">About Me</h2>
@@ -22,7 +23,7 @@ export default function About() {
         </div>
         <div className="flex flex-col md:flex-col lg:flex-row gap-x-28 items-center">
           <div className="max-w-auto mx-4 sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl rounded-lg text-gray-900 relative">
-            <div className="h-auto overflow-hidden">
+            <div className="h-auto overflow-hidden border-b-4 border-primary">
               <ClickableImageModal
                 imageUrl="/background/1.jpg"
                 containerClassName="w-full h-full"
@@ -34,7 +35,7 @@ export default function About() {
               <ClickableImageModal
                 imageUrl="/background/2.jpg"
                 containerClassName="w-full h-full"
-                imageClassName=" w-full h-full"
+                imageClassName=" w-full h-full border-b-4 border-primary"
               />
             </div>
           </div>
@@ -43,18 +44,18 @@ export default function About() {
               Hello, I&apos;m&nbsp;
               <span className="text-primary">Faocci Layug</span>
             </h1>
-            <p className="text-sm lg:text-lg font-general mt-4 text-white w-auto text-justify ">
+            <p className="text-sm lg:text-lg font-general mt-4 dark:text-gray-800 text-white w-auto text-justify ">
               Hello, I&apos;m Faocci Ghaize O. Layug, a dedicated individual
               with a passion for technology and design. My journey in the
               dynamic intersection of creativity and innovation has driven me to
               constantly seek new challenges and push the boundaries of
               what&apos;s possible in the digital realm.
             </p>
-            <p className="text-sm lg:text-lg font-general mt-4 text-white">
+            <p className="text-sm lg:text-lg font-general mt-4 dark:text-gray-800 text-white">
               <span className="text-primary">Residence:&nbsp;</span>
               Yona, Guam, USA
             </p>
-            <p className="text-sm lg:text-lg font-general mt-2 text-white">
+            <p className="text-sm lg:text-lg font-general mt-2 dark:text-gray-800 text-white">
               <a
                 href="mailto:faocciworx@gmail.com"
                 target="_blank"
@@ -64,7 +65,7 @@ export default function About() {
                 faocciworx@gmail.com
               </a>
             </p>
-            <p className="text-sm lg:text-lg font-general mt-2 text-white">
+            <p className="text-sm lg:text-lg font-general mt-2 dark:text-gray-800 text-white">
               <a
                 href="https://wa.me/16717878564"
                 target="_blank"
@@ -77,15 +78,15 @@ export default function About() {
           </div>
         </div>
         <div className="relative">
-          <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] border-[#FFFFFF33] rounded inline-block text-center p-3 mt-8 landscape:md:mt-0 landscape:2xl:mt-36">
+          <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] dark:text-gray-800 text-white dark:hover:text-primary hover:text-primary hover:border-primary dark:hover:border-primary dark:border-gray-800 border-[#FFFFFF33] rounded inline-block text-center p-3 mt-6 md:mt-10 lg:mt-16">
             My Services
           </h1>
 
           {/* First Three */}
           <div className="flex flex-col md:flex-row lg:flex-row pt-8 lg:pt-10 lg:p-4 gap-x-2 items-start">
             <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
-              <div className="service-container flex items-center">
-                <div className="mr-4 flex items-center justify-center self-start">
+              <div className="service-container flex items-center hover:text-primary">
+                <div className="mr-4 flex items-center justify-center self-start ">
                   <AiOutlineHtml5 className="h-12 w-12 text-primary" />
                 </div>
                 <div className="flex flex-col">
@@ -102,7 +103,7 @@ export default function About() {
               </div>
             </div>
             <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
-              <div className="service-container flex items-center">
+              <div className="service-container flex items-center hover:text-primary">
                 <div className="mr-4 flex items-center justify-center self-start font-general">
                   <FiPenTool className="h-12 w-12 text-primary" />
                 </div>
@@ -120,7 +121,7 @@ export default function About() {
               </div>
             </div>
             <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
-              <div className="service-container flex items-center">
+              <div className="service-container flex items-center hover:text-primary">
                 <div className="mr-4 flex items-center justify-center self-start">
                   <FaComputer className="h-12 w-12 text-primary" />
                 </div>
@@ -144,7 +145,7 @@ export default function About() {
           {/* Second Three */}
           <div className="flex flex-col md:flex-row lg:flex-row lg:p-4 gap-x-2 items-start md:mt-8 lg:mt-0">
             <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
-              <div className="service-container flex items-center">
+              <div className="service-container flex items-center hover:text-primary">
                 <div className="mr-4 flex items-center justify-center self-start">
                   <SiGoogledocs className="h-10 w-12 text-primary" />
                 </div>
@@ -162,7 +163,7 @@ export default function About() {
               </div>
             </div>
             <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
-              <div className="service-container flex items-center">
+              <div className="service-container flex items-center hover:text-primary">
                 <div className="mr-4 flex items-center justify-center self-start font-general">
                   <LuDatabaseBackup className="h-12 w-12 text-primary" />
                 </div>
@@ -179,13 +180,13 @@ export default function About() {
               </div>
             </div>
             <div className="flex justify-start items-center flex-1 mb-4 sm:mb-0">
-              <div className="service-container flex items-center">
+              <div className="service-container flex items-center hover:text-primary">
                 <div className="mr-4 flex items-center justify-center self-start">
                   <MdOutlineSecurity className="h-12 w-12 text-primary" />
                 </div>
                 <div className="flex flex-col">
                   <h1 className="text-xl mb-2 font-bold">IT Consultancy</h1>
-                  <p className="text-sm ">
+                  <p className="text-sm">
                     Specializing in IT consultancy, I enhance business
                     efficiency through strategic IT solutions. Lets work
                     together to navigate the tech landscape, implement tailored
@@ -198,15 +199,13 @@ export default function About() {
           </div>
 
           <div className="relative">
-            <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] border-[#FFFFFF33] rounded inline-block text-center p-3 mt-2 md:mt-10 lg:mt-16">
+            <h1 className="text-2xl lg:text-3xl font-general font-semibold border-[3px] dark:text-gray-800 text-white dark:hover:text-primary hover:text-primary hover:border-primary dark:hover:border-primary dark:border-gray-800 border-[#FFFFFF33] rounded inline-block text-center p-3 mt-2 md:mt-10 lg:mt-16">
               Testimonials
             </h1>
             <Testimonials />
           </div>
         </div>
-        <div className="flex justify-end fixed top-4 right-4">
-          <CloseBtn />
-        </div>
+        <div className="flex justify-end fixed top-4 right-4"></div>
       </WipeInRightAnimation>
     </div>
   );

@@ -10,7 +10,7 @@ const JLoading = ({
   autoClose = true,
   closeBtnText = "Start!",
   countdownDuration = 500, // Very short duration for ultra-fast loading
-  splashFunction = () => {}
+  splashFunction = () => {},
 }) => {
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [loadingComplete, setLoadingComplete] = useState(false);
@@ -22,7 +22,10 @@ const JLoading = ({
     let startTime = Date.now();
     const interval = setInterval(() => {
       const elapsedTime = Date.now() - startTime;
-      const progress = Math.min(Math.round((elapsedTime / countdownDuration) * 100), 100);
+      const progress = Math.min(
+        Math.round((elapsedTime / countdownDuration) * 100),
+        100
+      );
       setLoadingProgress(progress);
 
       if (progress === 100) {
@@ -55,19 +58,19 @@ const JLoading = ({
     height: "100%",
     zIndex: 9999999,
     transition: "opacity 0.5s ease-out", // Fade-out transition
-    opacity: fadeOut ? 0 : 1 // Apply fade-out effect
+    opacity: fadeOut ? 0 : 1, // Apply fade-out effect
   };
 
   const splashStyle = {
     position: "absolute",
     left: "50%",
-    transform: "translateX(-50%)"
+    transform: "translateX(-50%)",
   };
 
   const loaderStyle = {
     position: "absolute",
     left: "50%",
-    transform: "translateX(-50%)"
+    transform: "translateX(-50%)",
   };
 
   const percentageStyle = {
@@ -75,22 +78,41 @@ const JLoading = ({
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    textAlign: "center"
+    textAlign: "center",
   };
 
   return (
-    <div ref={overlayRef} id="jpreOverlay" style={overlayStyle}>
+    <div
+      ref={overlayRef}
+      id="jpreOverlay"
+      className="bg-primary absolute w-full h-full"
+      style={overlayStyle}
+    >
       {showSplash && splashRef.current && (
         <div
           id="jpreSlide"
+          className="text-[22px] text-white text-center w-1/2 h-[30%]"
           style={{ ...splashStyle, top: splashVPos }}
-          dangerouslySetInnerHTML={{ __html: splashRef.current.innerHTML }}
-        />
+        >
+          {splashRef.current.innerHTML}
+        </div>
       )}
-      <div id="jpreLoader" style={{ ...loaderStyle, top: loaderVPos }}>
-        <div id="jpreBar" style={{ width: `${loadingProgress}%`, height: "100%" }}></div>
+      <div
+        id="jpreLoader"
+        className="w-full h-[3px] bg-[#cecece]"
+        style={{ ...loaderStyle, top: loaderVPos }}
+      >
+        <div
+          id="jpreBar"
+          className="bg-white"
+          style={{ width: `${loadingProgress}%`, height: "100%" }} // Fixed template literal
+        ></div>
         {showPercentage && (
-          <div id="jprePercentage" style={percentageStyle}>
+          <div
+            id="jprePercentage"
+            className="z-negative font-bold text-center mt-[-10px] text-[160px] md:text-[160px] lg:text-[300px] tracking-[-8px] text-white"
+            style={percentageStyle}
+          >
             {loadingProgress}%
           </div>
         )}

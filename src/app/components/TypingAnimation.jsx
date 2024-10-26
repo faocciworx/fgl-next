@@ -43,7 +43,7 @@ const TypingAnimation = ({
   return (
     <div
       id="text"
-      className={`font-general text-xl md:text-4xl lg:text-3xl whitespace-pre text-primary overflow-hidden animate-caret border-r ${className}`}
+      className={`font-general text-xl md:text-4xl lg:text-3xl whitespace-pre text-primary overflow-hidden animate-caret border-r-2 border-primary ${className}`}
     >
       {displayedText}
     </div>

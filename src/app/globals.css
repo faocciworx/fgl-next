@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #202020;
-  color: white;
-  margin: 0;
-}
 
 .slide-in {
   transition: margin-left 0.3s ease-in-out;
@@ -140,62 +135,6 @@ body {
 .swiper-slide.swiper-slide-active > .group .slide_active\:text-gray-800 {
   ---tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
-}
-
-/* Loading */
-
-#jpreOverlay {
-	background-color: #000000;
-	position:absolute;
-	width:100%;
-	height:100%;
-}
-#jpreSlide{
-	font-size:22px;
-	color:#ccc;
-	text-align:center;
-	width:50%;
-	height:30%;
-}
-#jpreLoader{
-	width:100%;
-	height:2px;
-	background:#111;
-}
-
-#jpreBar {
-	background: #ff013d;
-}
-
-#jprePercentage {
-	z-index:-1;
-	font-weight: bold;
-	text-align:center;
-	margin-top:10px;
-	font-size:160px;
-	margin-top:-10px;
-	letter-spacing: -8px;
-	color:rgba(255,255,255,.1);
-}
-
-#jSplash{
-	line-height:200%;
-}
-
-#jSplash section{
-	padding:0;
-	display:block;
-	background:none !important;
-}
-
-.j-loading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000; /* Or whatever background color you prefer */
-  z-index: 9999; /* Ensure it's on top of other content */
 }
 
 /* Page Transition */
