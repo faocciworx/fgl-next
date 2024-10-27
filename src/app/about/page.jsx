@@ -16,7 +16,7 @@ export default function About() {
     <div className="relative flex flex-col font-general px-7">
       <WipeInRightAnimation duration="2.5s">
         <Navbarpage />
-        <div className="flex flex-col justify-center items-center my-10 lg:my-20 gap-y-5">
+        <div className="flex flex-col justify-center items-center mt-10 lg:mt-20 gap-y-5">
           <h4 className="text-xl text-primary">Who I Am</h4>
           <h2 className="text-5xl font-semibold">About Me</h2>
           <hr className="w-28 mx-auto my-4 border-t-2 border-primary" />

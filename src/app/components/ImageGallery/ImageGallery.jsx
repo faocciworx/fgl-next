@@ -170,7 +170,7 @@ const ImageGallery = () => {
           </button>
         ))}
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 sm:grid-cols-1 gap-4 mb-10 lg:mb-20">
+      <div className="grid grid-cols-2 md:grid-cols-3 sm:grid-cols-1 gap-4 mb-5">
         {ImageData[activeCategory].map((image, index) => (
           <div
             key={index}

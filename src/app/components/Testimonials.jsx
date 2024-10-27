@@ -187,7 +187,7 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="mb-20">
+    <section className="mb-7">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-12">
         <div ref={testimonialsRef} className="mb-16 text-center"></div>
         <div
