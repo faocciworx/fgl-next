@@ -6,14 +6,11 @@ const ThemeToggle = () => {
   const [theme, setTheme] = useState("light"); // Default to light theme
 
   useEffect(() => {
-    // Check local storage and preferred color scheme on the client side
+    // Check local storage on the client side
     const storedTheme = localStorage.getItem("color-theme");
-    const prefersDarkScheme = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
 
-    // Set theme based on storage or system preference
-    setTheme(storedTheme || (prefersDarkScheme ? "dark" : "light"));
+    // Set theme based on storage or default to light
+    setTheme(storedTheme || "light");
   }, []);
 
   useEffect(() => {
