@@ -73,7 +73,7 @@ const Navbar = () => {
 
           <Link href="/" passHref>
             <div className="flex items-start space-x-3 cursor-pointer">
-              <span className="self-start text-primary text-2xl font-semibold">
+              <span className="self-start dark:text-primary text-white text-2xl font-semibold">
                 FGOL
               </span>
             </div>

@@ -1,4 +1,5 @@
 import WipeInRightAnimation from "../components/Animations/WipeInRightAnimation";
+import Footer from "../components/Footer/page";
 import ImageGallery from "../components/ImageGallery/ImageGallery";
 import Navbarpage from "../components/Navbar/Navbarpage";
 
@@ -14,6 +15,7 @@ export default function Portfolio() {
         </div>
         <ImageGallery />
         <div className="flex justify-end fixed top-4 right-4"></div>
+        {/* <Footer /> */}
       </WipeInRightAnimation>
     </div>
   );

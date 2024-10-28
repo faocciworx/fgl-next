@@ -1,5 +1,6 @@
 import WipeInRightAnimation from "../components/Animations/WipeInRightAnimation";
 import CertificationsGallery from "../components/Certifications/CertificationsGallery";
+import Footer from "../components/Footer/page";
 import Navbarpage from "../components/Navbar/Navbarpage";
 
 export default function Certifications() {
@@ -16,6 +17,7 @@ export default function Certifications() {
         </div>
         <CertificationsGallery />
         <div className="flex justify-end fixed top-4 right-4"></div>
+        {/* <Footer /> */}
       </WipeInRightAnimation>
     </div>
   );

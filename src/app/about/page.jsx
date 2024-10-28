@@ -10,6 +10,7 @@ import { MdOutlineSecurity } from "react-icons/md";
 import Testimonials from "../components/Testimonials";
 import WipeInRightAnimation from "../components/Animations/WipeInRightAnimation";
 import Navbarpage from "../components/Navbar/Navbarpage";
+import Footer from "../components/Footer/page";
 
 export default function About() {
   return (
@@ -206,6 +207,7 @@ export default function About() {
           </div>
         </div>
         <div className="flex justify-end fixed top-4 right-4"></div>
+        {/* <Footer /> */}
       </WipeInRightAnimation>
     </div>
   );

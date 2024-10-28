@@ -8,6 +8,7 @@ import { SiGoogledocs } from "react-icons/si";
 import { LuDatabaseBackup } from "react-icons/lu";
 import { MdOutlineSecurity } from "react-icons/md";
 import Navbarpage from "../components/Navbar/Navbarpage";
+import Footer from "../components/Footer/page";
 export default function Resume() {
   const [experience2016, setExperience2016] = useState(0);
   const [experience2014, setExperience2014] = useState(0);
@@ -480,6 +481,7 @@ export default function Resume() {
           {/* Applications Used End */}
         </div>
         <div className="flex justify-end fixed top-4 right-4"></div>
+        {/* <Footer /> */}
       </WipeInRightAnimation>
     </div>
   );
