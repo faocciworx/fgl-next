@@ -1180,6 +1180,14 @@ const ImageData = {
       description:
         "A delicate and beautiful tarpaulin created in Photoshop for a pink-themed christening. The design features soft hues, gentle imagery, and elegant text, making it an ideal choice for celebrating this special occasion.",
     },
+    {
+      src: "/portfolio/Cover/Cover(10).jpg",
+      liveUrl:
+        "https://mega.nz/file/mJIR1TpR#omPxxkQya3fEGtVjHfLTljYPsu0eMXLLlnrJefLCR5Q",
+      title: "Faocci Linked In Cover",
+      description:
+        "A Showcase your professional brand with this custom-designed LinkedIn cover. The Faocci Linked In Cover, features a sleek and modern aesthetic, perfect for making a strong impression on potential employers and networking contacts. The design incorporates elements that reflect your personality and expertise, making it a standout piece in your profile. Ideal for anyone looking to enhance their online presence, this cover is an essential addition to your professional toolkit.",
+    },
   ],
   Presentation: [
     {
