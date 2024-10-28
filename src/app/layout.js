@@ -11,6 +11,20 @@ export const metadata = {
   keywords: "Faocci Layug, FGOL, Faocci, Ghaize, BSIT",
   author: "Faocci Ghaize O. Layug",
   robots: "Faocci, Layug",
+  openGraph: {
+    title: "FGOL - Tech and Design Enthusiast",
+    description:
+      "Hello, I'm Faocci Ghaize O. Layug, ready to bring my expertise in tech and design to your projects. Let's make a positive impact together!",
+    images: [
+      {
+        url: "/social/Social_Preview.jpg", // Replace with the actual file name if different
+        width: 1200,
+        height: 630,
+        alt: "Faocci Ghaize O. Layug - Tech and Design Enthusiast",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
