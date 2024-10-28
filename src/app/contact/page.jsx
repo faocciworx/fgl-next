@@ -4,7 +4,7 @@ import Navbarpage from "../components/Navbar/Navbarpage";
 
 export default function Contact() {
   return (
-    <div className="relative flex flex-col font-general px-7">
+    <div className="relative flex flex-col items-center justify-center font-general px-7 min-h-screen">
       <WipeInRightAnimation duration="2.5s">
         <Navbarpage />
         <div className="flex justify-end fixed top-4 right-4"></div>

@@ -15,7 +15,6 @@ import {
 import Sidebar from "./Sidebar";
 import ThemeToggle from "../ThemeToggle";
 
-// Define navItems at the top level
 const navItems = [
   { href: "/", label: "Home", icon: <FaHome className="lg:hidden" /> },
   { href: "/about", label: "About Me", icon: <FaUser className="lg:hidden" /> },
@@ -55,64 +54,57 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full landscape:lg:pt-32 landscape:xl:pt-0 landscape:2xl:pt-0 portrait:lg:pb-40">
-        <div className="w-full items-center py-2 lg:py-10 h-5 lg:pb-20">
-          <div className="flex items-center space-x-3">
-            {/* Mobile menu toggle button */}
-            <button
-              type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm dark:text-gray-800 text-white rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-              aria-controls="sidebar"
-              aria-expanded={isOpen}
-              onClick={toggleMenu}
-            >
-              {isOpen ? (
-                <FaTimes className="w-5 h-5" />
-              ) : (
-                <FaBars className="w-5 h-5" />
-              )}
-            </button>
+      <nav className="w-full flex items-center justify-between py-1">
+        {/* Mobile menu toggle button and Brand */}
+        <div className="flex items-center">
+          <button
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm dark:text-gray-800 text-white rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="sidebar"
+            aria-expanded={isOpen}
+            onClick={toggleMenu}
+          >
+            {isOpen ? (
+              <FaTimes className="w-5 h-5" />
+            ) : (
+              <FaBars className="w-5 h-5" />
+            )}
+          </button>
 
-            {/* Brand */}
-            <Link href="#">
-              <div className="flex items-center space-x-3 cursor-pointer w-full">
-                <span className="self-center text-primary text-2xl font-semibold whitespace-nowrap">
-                  <button href="#">FGOL</button>
-                </span>
-              </div>
-            </Link>
-
-            <div className="flex lg:hidden xl:hidden 2xl:hidden w-full items-end justify-end">
-              <ThemeToggle />
+          <Link href="/" passHref>
+            <div className="flex items-start space-x-3 cursor-pointer">
+              <span className="self-start text-primary text-2xl font-semibold">
+                FGOL
+              </span>
             </div>
+          </Link>
+        </div>
 
-            {/* Navbar links */}
-            <div className="hidden lg:flex justify-center w-full">
-              <ul className="flex flex-col lg:flex-row">
-                {navItems.map((item) => (
-                  <li key={item.label}>
-                    <Link href={item.href} passHref>
-                      <span
-                        className={`flex items-center space-x-2 py-2 px-3 rounded cursor-pointer ${
-                          item.href === pathname
-                            ? "text-primary"
-                            : "dark:text-gray-800 text-white hover:text-primary"
-                        }`}
-                      >
-                        {item.icon}
-                        <span>{item.label}</span>
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        {/* Navbar links */}
+        <div className="hidden lg:flex flex-1 justify-center">
+          <ul className="flex items-center space-x-4">
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <Link href={item.href} passHref>
+                  <span
+                    className={`flex items-center space-x-2 py-2 px-3 rounded cursor-pointer ${
+                      item.href === pathname
+                        ? "text-primary"
+                        : "dark:text-gray-800 text-white hover:text-primary"
+                    }`}
+                  >
+                    {item.icon}
+                    <span>{item.label}</span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-            {/* Dark Mode & Light Mode Button */}
-            <div className="hidden lg:flex items-center space-x-5 cursor-pointer">
-              <ThemeToggle />
-            </div>
-          </div>
+        {/* Dark Mode & Light Mode Toggle */}
+        <div className="flex items-center space-x-3">
+          <ThemeToggle />
         </div>
       </nav>
 

@@ -17,9 +17,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.className} scroll-smooth dark:bg-[#f2ede6] bg-[#202020] m-0 w-full font-general `}
+        className={`${inter.className} scroll-smooth dark:bg-[#f2ede6] bg-[#202020] m-0 w-full font-general`}
       >
-        <h1 className="dark:text-gray-800 text-white">{children}</h1>
+        <div className="container mx-auto">
+          <h1 className="dark:text-gray-800 text-white">{children}</h1>
+        </div>
       </body>
     </html>
   );

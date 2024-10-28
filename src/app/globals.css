@@ -38,7 +38,6 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 100vh;
     overflow: auto;
   }
 
@@ -79,7 +78,6 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 100vh;
     overflow: auto;
   }
 
@@ -159,7 +157,6 @@
 .wipe-in-left-wrapper {
   position: relative;
   width: 100%;
-  height: 100vh;
   overflow: auto;
 }
 

@@ -210,7 +210,7 @@ const ContactForm = () => {
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="w-full ml-auto space-y-4 mb-14">
+      <form onSubmit={handleSubmit} className="w-full ml-auto space-y-4 mb-5">
         <h1 className="text-xl font-general font-bold">Get in Touch</h1>
         <p className="text-sm lg:text-lg font-general mt-4 dark:text-gray-800 text-white w-auto text-justify">
           Got a big idea? Let&apos;s bring it to life. Contact me today!

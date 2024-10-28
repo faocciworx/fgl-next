@@ -40,7 +40,7 @@ export default function Home() {
       <WipeInLeftAnimation duration="2.5s">
         <Navbar />
         <JParticles />
-        <div className="flex flex-col lg:flex-row justify-center items-center flex-1 py-10 md:px-5 lg:px-0 lg:pt-10 w-full h-full md:min-h-screen lg:min-h-0">
+        <div className="flex flex-col lg:flex-row justify-center items-center flex-1 py-5 md:px-5 portrait:md:py-20 lg:px-0 portrait:lg:pt-48 xl:pt-16 2xl:pt-16 w-full h-full lg:min-h-0">
           <div className="flex justify-center items-center pb-5 w-full md:w-1/2 lg:order-1">
             <div className="rounded-full overflow-hidden relative">
               {!imageLoaded && (
