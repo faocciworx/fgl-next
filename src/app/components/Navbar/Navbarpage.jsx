@@ -42,7 +42,7 @@ const navItems = [
 
 const Navbarpage = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true); // Start visible
+  const [isVisible, setIsVisible] = useState(false); // Start visible
   const pathname = usePathname();
 
   const toggleMenu = () => {
