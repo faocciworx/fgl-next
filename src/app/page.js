@@ -55,13 +55,15 @@ export default function Home() {
                 width={500}
                 height={500}
                 alt="Faocci Layug Photo"
+                priority
                 className={`w-60 h-64 md:w-72 md:h-auto lg:w-[500px] lg:h-[540px] transition-opacity duration-500 ${
                   imageLoaded ? "opacity-100" : "opacity-0"
                 }`}
-                onLoadingComplete={() => setImageLoaded(true)}
+                onLoad={() => setImageLoaded(true)}
               />
             </div>
           </div>
+
           <div className="flex flex-col items-center lg:items-start justify-center w-full lg:w-1/2 gap-y-4 px-4 text-center md:text-left">
             <h1 className="text-3xl md:text-5xl lg:text-5xl font-general font-bold">
               I&apos;m&nbsp;
