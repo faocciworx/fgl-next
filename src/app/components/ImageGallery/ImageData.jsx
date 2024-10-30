@@ -36,6 +36,13 @@ const ImageData = {
       description:
         "During my OJT at Geopro Global Solutions Inc., I managed the development of Fruit Admin, an administrative dashboard for a gambling app. This project was built using Next.js as the framework, leveraging React and TypeScript to create a robust and user-friendly admin interface.n",
     },
+    {
+      src: "/portfolio/Web/Web(6).jpg",
+      liveUrl: "https://faocciworx.github.io/FGL-Repair/",
+      title: "FGL Repair",
+      description:
+        "One of my final projects during my first year of college, this project involved developing an administrative dashboard for FGL Repair, a repair shop management system. Built using HTML, CSS, SASS, and Bootstrap, it offers a user-friendly interface tailored for efficient shop management.",
+    },
 
     //Mock Ups
 
@@ -498,6 +505,54 @@ const ImageData = {
         "A dynamic and youthful background design for an SK candidacy, made in Photoshop. The background features vibrant colors and modern graphics, creating an energetic and engaging atmosphere for campaign materials.",
     },
     {
+      src: "/portfolio/Cover/Cover(10).jpg",
+      liveUrl:
+        "https://mega.nz/file/mJIR1TpR#omPxxkQya3fEGtVjHfLTljYPsu0eMXLLlnrJefLCR5Q",
+      title: "Faocci Linked In Cover",
+      description:
+        "A Showcase your professional brand with this custom-designed LinkedIn cover. The Faocci Linked In Cover, features a sleek and modern aesthetic, perfect for making a strong impression on potential employers and networking contacts. The design incorporates elements that reflect your personality and expertise, making it a standout piece in your profile. Ideal for anyone looking to enhance their online presence, this cover is an essential addition to your professional toolkit.",
+    },
+    {
+      src: "/portfolio/Cover/Cover(11).jpg",
+      liveUrl:
+        "https://mega.nz/file/mBYAHTiI#3v1QZSI7IgpfSi_BLI8EnxWqc4rBj_VVt92CANIq4qg",
+      title: "Rianne Christening",
+      description:
+        "Celebrate the joy of a new beginning with this adorable pink-themed christening invitation. Designed with a kid-friendly toy theme, this invitation captures the warmth and charm of the occasion, featuring playful elements that are perfect for a memorable and inviting celebration.",
+    },
+    {
+      src: "/portfolio/Cover/Cover(12).jpg",
+      liveUrl:
+        "https://mega.nz/file/PEYXBA6B#P8CUASUeXGfc81Qydr-JgMS06SvayA-JlXvYuzySnWY",
+      title: "Mar Christening Invitation",
+      description:
+        "Welcome a precious new life with this charming blue-themed christening invitation. Styled with a baby-friendly design, it incorporates gentle blue hues and soft visuals, ideal for commemorating the special day with a touch of elegance and warmth.",
+    },
+    {
+      src: "/portfolio/Cover/Cover(13).jpg",
+      liveUrl:
+        "https://mega.nz/file/iQw02CAI#UEqmSHzoM2qFKn_X5wwLGht8V3CktlnMYSVfpjXzkmQ",
+      title: "Mar Christening Tarpaulin",
+      description:
+        "Celebrate the christening of a precious new life with this blue-themed tarpaulin design. Featuring a baby-friendly theme with soft blue hues, this tarpaulin adds a warm and welcoming touch to the occasion, perfect for creating a memorable backdrop for the event.",
+    },
+    {
+      src: "/portfolio/Cover/Cover(14).jpg",
+      liveUrl:
+        "https://mega.nz/file/DIxEXbCZ#pAvt8FVN9-wFs8fLM0lfOHyEmsLI7ZZdjF-OW4y6VFc",
+      title: "JSS Cover Page",
+      description:
+        "Make a statement with the vibrant red-themed cover page for Jan's Shoe Syndicate, capturing the essence of trendy footwear. This design highlights the store's commitment to quality and style, perfectly tailored for attracting fashion-conscious shoppers",
+    },
+    {
+      src: "/portfolio/Cover/Cover(15).jpg",
+      liveUrl:
+        "https://mega.nz/file/jdgj3bgB#fDWNREFC2fYfZAse2mOwesVBgL1ViIWNpTh1k26gHtI",
+      title: "JSS Tarpaulin",
+      description:
+        "Elevate your brand presence with the bold red tarpaulin for Jan's Shoe Syndicate. This eye-catching design is crafted to enhance visibility and create a memorable impression, drawing in shoe lovers at any event.",
+    },
+    {
       src: "/portfolio/Cover/Cover(4).jpg",
       liveUrl:
         "https://mega.nz/file/SYIQ2RJT#zOtmmjcEeeKxmJ9TTnedUjd-4N4qXUgyxddJf9eCxSg",
@@ -620,6 +675,22 @@ const ImageData = {
       description:
         "A fun and creative presentation for the Cookies Mo project, designed in PowerPoint. The presentation is filled with colorful visuals, playful graphics, and engaging content that captures the essence of the project and keeps the audience entertained.",
     },
+    {
+      src: "/portfolio/Presentation/Presentation(10).jpg",
+      liveUrl:
+        "https://mega.nz/file/fVhAxYQI#jvArqmDkYOuzWT6eJEvYxSFVKzjba4EsWl4qk8oYPeU",
+      title: "MAD Presentation",
+      description:
+        "Unleash creativity with the Mad Presentation, featuring a striking character design of a robot in a vibrant yellow theme. This design combines modern aesthetics with playful elements, making it perfect for engaging audiences and showcasing innovative ideas",
+    },
+    {
+      src: "/portfolio/Presentation/Presentation(11).jpg",
+      liveUrl:
+        "https://mega.nz/file/vMgx0aLa#05HEvyyvpnDyBVHaitcGWb6uvQRD4BgsmyDyZGvukso",
+      title: "SIPP Presentation",
+      description:
+        "Step into elegance with the SIPP Presentation, showcasing St. Thomas Aquinas in a classic brown design. This presentation exudes timeless charm, blending traditional elements with sophisticated visuals, ideal for conveying important concepts with grace and authority.",
+    },
 
     // Etc
 
@@ -675,6 +746,13 @@ const ImageData = {
       title: "Fruit Admin",
       description:
         "During my OJT at Geopro Global Solutions Inc., I managed the development of Fruit Admin, an administrative dashboard for a gambling app. This project was built using Next.js as the framework, leveraging React and TypeScript to create a robust and user-friendly admin interface.n",
+    },
+    {
+      src: "/portfolio/Web/Web(6).jpg",
+      liveUrl: "https://faocciworx.github.io/FGL-Repair/",
+      title: "FGL Repair",
+      description:
+        "One of my final projects during my first year of college, this project involved developing an administrative dashboard for FGL Repair, a repair shop management system. Built using HTML, CSS, SASS, and Bootstrap, it offers a user-friendly interface tailored for efficient shop management.",
     },
   ],
   Mockups: [
@@ -1133,6 +1211,54 @@ const ImageData = {
         "A dynamic and youthful background design for an SK candidacy, made in Photoshop. The background features vibrant colors and modern graphics, creating an energetic and engaging atmosphere for campaign materials.",
     },
     {
+      src: "/portfolio/Cover/Cover(10).jpg",
+      liveUrl:
+        "https://mega.nz/file/mJIR1TpR#omPxxkQya3fEGtVjHfLTljYPsu0eMXLLlnrJefLCR5Q",
+      title: "Faocci Linked In Cover",
+      description:
+        "A Showcase your professional brand with this custom-designed LinkedIn cover. The Faocci Linked In Cover, features a sleek and modern aesthetic, perfect for making a strong impression on potential employers and networking contacts. The design incorporates elements that reflect your personality and expertise, making it a standout piece in your profile. Ideal for anyone looking to enhance their online presence, this cover is an essential addition to your professional toolkit.",
+    },
+    {
+      src: "/portfolio/Cover/Cover(11).jpg",
+      liveUrl:
+        "https://mega.nz/file/mBYAHTiI#3v1QZSI7IgpfSi_BLI8EnxWqc4rBj_VVt92CANIq4qg",
+      title: "Rianne Christening",
+      description:
+        "Celebrate the joy of a new beginning with this adorable pink-themed christening invitation. Designed with a kid-friendly toy theme, this invitation captures the warmth and charm of the occasion, featuring playful elements that are perfect for a memorable and inviting celebration.",
+    },
+    {
+      src: "/portfolio/Cover/Cover(12).jpg",
+      liveUrl:
+        "https://mega.nz/file/PEYXBA6B#P8CUASUeXGfc81Qydr-JgMS06SvayA-JlXvYuzySnWY",
+      title: "Mar Christening Invitation",
+      description:
+        "Welcome a precious new life with this charming blue-themed christening invitation. Styled with a baby-friendly design, it incorporates gentle blue hues and soft visuals, ideal for commemorating the special day with a touch of elegance and warmth.",
+    },
+    {
+      src: "/portfolio/Cover/Cover(13).jpg",
+      liveUrl:
+        "https://mega.nz/file/iQw02CAI#UEqmSHzoM2qFKn_X5wwLGht8V3CktlnMYSVfpjXzkmQ",
+      title: "Mar Christening Tarpaulin",
+      description:
+        "Celebrate the christening of a precious new life with this blue-themed tarpaulin design. Featuring a baby-friendly theme with soft blue hues, this tarpaulin adds a warm and welcoming touch to the occasion, perfect for creating a memorable backdrop for the event.",
+    },
+    {
+      src: "/portfolio/Cover/Cover(14).jpg",
+      liveUrl:
+        "https://mega.nz/file/DIxEXbCZ#pAvt8FVN9-wFs8fLM0lfOHyEmsLI7ZZdjF-OW4y6VFc",
+      title: "JSS Cover Page",
+      description:
+        "Make a statement with the vibrant red-themed cover page for Jan's Shoe Syndicate, capturing the essence of trendy footwear. This design highlights the store's commitment to quality and style, perfectly tailored for attracting fashion-conscious shoppers",
+    },
+    {
+      src: "/portfolio/Cover/Cover(15).jpg",
+      liveUrl:
+        "https://mega.nz/file/jdgj3bgB#fDWNREFC2fYfZAse2mOwesVBgL1ViIWNpTh1k26gHtI",
+      title: "JSS Tarpaulin",
+      description:
+        "Elevate your brand presence with the bold red tarpaulin for Jan's Shoe Syndicate. This eye-catching design is crafted to enhance visibility and create a memorable impression, drawing in shoe lovers at any event.",
+    },
+    {
       src: "/portfolio/Cover/Cover(4).jpg",
       liveUrl:
         "https://mega.nz/file/SYIQ2RJT#zOtmmjcEeeKxmJ9TTnedUjd-4N4qXUgyxddJf9eCxSg",
@@ -1179,14 +1305,6 @@ const ImageData = {
       title: "Christening Pink Tarpaulin",
       description:
         "A delicate and beautiful tarpaulin created in Photoshop for a pink-themed christening. The design features soft hues, gentle imagery, and elegant text, making it an ideal choice for celebrating this special occasion.",
-    },
-    {
-      src: "/portfolio/Cover/Cover(10).jpg",
-      liveUrl:
-        "https://mega.nz/file/mJIR1TpR#omPxxkQya3fEGtVjHfLTljYPsu0eMXLLlnrJefLCR5Q",
-      title: "Faocci Linked In Cover",
-      description:
-        "A Showcase your professional brand with this custom-designed LinkedIn cover. The Faocci Linked In Cover, features a sleek and modern aesthetic, perfect for making a strong impression on potential employers and networking contacts. The design incorporates elements that reflect your personality and expertise, making it a standout piece in your profile. Ideal for anyone looking to enhance their online presence, this cover is an essential addition to your professional toolkit.",
     },
   ],
   Presentation: [
@@ -1261,6 +1379,22 @@ const ImageData = {
       title: "Cookies Mo Presentation",
       description:
         "A fun and creative presentation for the Cookies Mo project, designed in PowerPoint. The presentation is filled with colorful visuals, playful graphics, and engaging content that captures the essence of the project and keeps the audience entertained.",
+    },
+    {
+      src: "/portfolio/Presentation/Presentation(10).jpg",
+      liveUrl:
+        "https://mega.nz/file/fVhAxYQI#jvArqmDkYOuzWT6eJEvYxSFVKzjba4EsWl4qk8oYPeU",
+      title: "MAD Presentation",
+      description:
+        "Unleash creativity with the Mad Presentation, featuring a striking character design of a robot in a vibrant yellow theme. This design combines modern aesthetics with playful elements, making it perfect for engaging audiences and showcasing innovative ideas",
+    },
+    {
+      src: "/portfolio/Presentation/Presentation(11).jpg",
+      liveUrl:
+        "https://mega.nz/file/vMgx0aLa#05HEvyyvpnDyBVHaitcGWb6uvQRD4BgsmyDyZGvukso",
+      title: "SIPP Presentation",
+      description:
+        "Step into elegance with the SIPP Presentation, showcasing St. Thomas Aquinas in a classic brown design. This presentation exudes timeless charm, blending traditional elements with sophisticated visuals, ideal for conveying important concepts with grace and authority.",
     },
   ],
   Others: [
