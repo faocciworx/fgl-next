@@ -7,6 +7,8 @@ import {
   FaLinkedinIn,
   FaGithub,
   FaWhatsapp,
+  FaPinterestP,
+  FaBehance,
 } from "react-icons/fa";
 
 const ContactForm = () => {
@@ -195,6 +197,24 @@ const ContactForm = () => {
                 rel="noopener noreferrer"
               >
                 <FaLinkedinIn size={20} />
+              </a>
+            </li>
+            <li className="flex items-center justify-center text-white dark:hover:text-gray-800 hover:text-white ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
+              <a
+                href="https://www.behance.net/faoccilayug"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaBehance size={20} />
+              </a>
+            </li>
+            <li className="flex items-center justify-center text-white dark:hover:text-gray-800 hover:text-white ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
+              <a
+                href="https://www.pinterest.com/faoccilayug/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaPinterestP size={20} />
               </a>
             </li>
             <li className="flex items-center justify-center text-white dark:hover:text-gray-800 hover:text-white ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">

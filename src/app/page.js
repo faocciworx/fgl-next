@@ -3,7 +3,13 @@ import { useState } from "react";
 import Image from "next/image";
 import Navbar from "./components/Navbar/Navbar";
 import TypingAnimation from "./components/TypingAnimation";
-import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaGithub,
+  FaPinterestP,
+  FaBehance,
+} from "react-icons/fa";
 import JLoading from "./components/JLoading/JLoading";
 import WipeInLeftAnimation from "./components/Animations/WipeInLeftAnimation";
 import JParticles from "./components/JParticles";
@@ -24,6 +30,18 @@ export default function Home() {
       href: "https://www.linkedin.com/in/faocci/",
       icon: (
         <FaLinkedinIn className="social-media-icon h-5 w-5 text-white dark:hover:text-gray-800 hover:text-white" />
+      ),
+    },
+    {
+      href: "https://www.behance.net/faoccilayug",
+      icon: (
+        <FaBehance className="social-media-icon h-7 w-6 text-white dark:hover:text-gray-800 hover:text-white" />
+      ),
+    },
+    {
+      href: "https://www.pinterest.com/faoccilayug/",
+      icon: (
+        <FaPinterestP className="social-media-icon h-7 w-6 text-white dark:hover:text-gray-800 hover:text-white" />
       ),
     },
     {
@@ -64,7 +82,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center lg:items-start justify-center w-full lg:w-1/2 gap-y-4 px-4 text-center md:text-left">
+          <div className="flex flex-col items-center lg:items-start justify-center w-full lg:w-1/2 gap-y-7 px-4 text-center md:text-left">
             <h1 className="text-3xl md:text-5xl lg:text-5xl font-general font-bold">
               I&apos;m&nbsp;
               <span className="text-primary">Faocci&nbsp;</span>
@@ -83,7 +101,7 @@ export default function Home() {
                 className=""
               />
             </div>
-            <p className="font-general text-base lg:text-lg mt-4 dark:text-gray-800 text-white w-full lg:w-11/12 leading-7 md:leading-10 lg:leading-8 text-justify">
+            <p className="font-general text-base lg:text-lg dark:text-gray-800 text-white w-full lg:w-11/12 leading-7 md:leading-10 lg:leading-8 text-justify">
               Hello, I&apos;m Faocci Ghaize O. Layug, a tech and design
               enthusiast ready to bring my expertise to your projects. With a
               knack for creative problem-solving in web and graphic design, and
