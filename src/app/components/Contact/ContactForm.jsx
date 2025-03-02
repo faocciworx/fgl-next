@@ -158,7 +158,7 @@ const ContactForm = () => {
             <li className="flex items-center mt-3">
               <div className="flex items-center justify-center text-white dark:hover:text-gray-800 hover:text-white ml-1 w-10 h-10 bg-primary rounded-full overflow-hidden hover:bg-transparent hover:ring-2 ring-primary transition-all duration-300">
                 <a
-                  href="https://wa.me/16717878564"
+                  href="https://wa.me/17734695991"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -167,12 +167,12 @@ const ContactForm = () => {
               </div>
 
               <a
-                href="https://wa.me/16717878564"
+                href="https://wa.me/17734695991"
                 className="dark:text-gray-800 text-white text-sm ml-3"
               >
                 <small className="block text-primary">WhatsApp</small>
                 <strong className="text-sm lg:text-lg font-general mt-4 dark:text-gray-800 text-white w-auto text-justify">
-                  +(671) 787- 8564
+                  +(773) 469- 5991
                 </strong>
               </a>
             </li>
