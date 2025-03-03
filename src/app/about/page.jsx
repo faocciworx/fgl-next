@@ -68,12 +68,12 @@ export default function About() {
             </p>
             <p className="text-sm lg:text-lg font-general mt-2 dark:text-gray-800 text-white">
               <a
-                href="https://wa.me/16717878564"
+                href="https://wa.me/17734695991"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="text-primary">Phone:&nbsp;</span>
-                +(671) 787- 8564
+                +(773) 469- 5991
               </a>
             </p>
           </div>
